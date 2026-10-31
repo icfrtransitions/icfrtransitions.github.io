@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICFR Transitions Project</title>
+<meta name="description" content="A non-commercial research project on internal control over financial reporting (ICFR) at two transitions: acquired operations entering management's assessment, and newly public companies preparing for their first assessment.">
+<style>
+  :root { --ink:#1d2430; --muted:#5a6475; --line:#dde2ea; --accent:#1f5f8b; --bg:#ffffff; --soft:#f5f7fa; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8ecf2; --muted:#a6b0bf; --line:#2c3442; --accent:#7fb6dd; --bg:#12161d; --soft:#1a2029; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.6 Georgia, "Times New Roman", serif; color:var(--ink); background:var(--bg); }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+  header p.kicker { font: 600 13px/1.4 system-ui, sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1 { font-size: 34px; line-height:1.2; margin: 0 0 12px; }
+  h2 { font: 700 15px/1.4 system-ui, sans-serif; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin: 40px 0 10px; border-top:1px solid var(--line); padding-top:24px; }
+  .lead { font-size: 19px; color: var(--muted); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+  .card { background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:16px 18px; }
+  .card h3 { font: 700 16px/1.4 system-ui, sans-serif; margin:0 0 6px; }
+  .card p { margin:0; font-size:15.5px; }
+  table { width:100%; border-collapse:collapse; font: 15px/1.5 system-ui, sans-serif; }
+  td, th { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  a { color: var(--accent); }
+  .note { font: 14px/1.6 system-ui, sans-serif; color: var(--muted); background:var(--soft); border-left:3px solid var(--accent); padding:12px 14px; border-radius:4px; }
+  footer { margin-top:48px; font: 13px/1.6 system-ui, sans-serif; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="kicker">Independent, non-commercial research</p>
+    <h1>ICFR Transitions Project</h1>
+    <p class="lead">A filing-based study of internal control over financial reporting (ICFR) at two points where a U.S. public company's annual assessment changes footing, and free practitioner guidance built from what the filings show.</p>
+  </header>
+
+  <h2>The two transitions</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Acquired operations</h3>
+      <p>SEC staff allow management to exclude a recently acquired business from its ICFR assessment for up to one year. The study follows each excluded business to the next annual assessment.</p>
+    </div>
+    <div class="card">
+      <h3>Newly public companies</h3>
+      <p>A newly public company may omit management's ICFR report from its first annual report. The study follows each company to its first full assessment and any remediation that follows.</p>
+    </div>
+  </div>
+
+  <h2>Status</h2>
+  <table>
+    <tr><th>Item</th><th>Status</th></tr>
+    <tr><td>Research protocol v1.0</td><td>Written; to be registered on OSF before the main analysis</td></tr>
+    <tr><td>Pilot (10-K filings, March 3&ndash;6, 2025)</td><td>Used to develop the screening rules; reported separately</td></tr>
+    <tr><td>Main sample (10-K filings dated in 2025)</td><td>Not started; begins after registration</td></tr>
+    <tr><td>Dataset, report and guidance</td><td>Planned; each release will carry a DOI</td></tr>
+  </table>
+  <p style="font:14px/1.6 system-ui,sans-serif;color:var(--muted)">This page will link each registration and release as it becomes available.</p>
+
+  <h2>Method in brief</h2>
+  <p>All data comes from public SEC filings on EDGAR. Candidate filings are found with fixed full-text searches, screened by written rules, and confirmed by hand against Item 9A of each 10-K before they enter the dataset. Every record links to its source filing so anyone can check it.</p>
+
+  <div class="note">
+    <strong>Educational use only.</strong> Materials on this site are for education and research. They are not audit, accounting or legal advice. The project is not affiliated with, reviewed by or endorsed by the SEC, the PCAOB or any company discussed. It uses public filings only, and no confidential employer or client information.
+  </div>
+
+  <h2>Contact</h2>
+  <p>Mian Sajjad Ur Rehman &middot; <a href="https://orcid.org/0009-0003-2396-7679">ORCID 0009-0003-2396-7679</a> &middot; <a href="mailto:icfrtransitions@gmail.com">icfrtransitions@gmail.com</a></p>
+  <p>Corrections and comments are welcome by email.</p>
+
+  <footer>
+    Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source and change history: <a href="https://github.com/icfrtransitions/icfrtransitions.github.io">GitHub</a>.
+  </footer>
+</main>
+</body>
+</html>
