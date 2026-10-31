@@ -2,20 +2,25 @@
 
 Independent, non-commercial research on internal control over financial reporting (ICFR) at two transitions in U.S. public companies:
 
-1. **Acquired operations.** A recently acquired business is excluded from management's ICFR assessment (allowed by SEC staff for up to one year).
+1. **Acquired operations.** A recently acquired business is excluded from management's ICFR assessment. SEC staff allow this in defined circumstances, for no more than one year and one annual report.
 2. **Newly public companies.** Management's ICFR report is omitted under the SEC transition period, before the first full assessment.
 
-The project builds a case-level dataset from public SEC filings, linked to each source filing. It follows each event to the next annual assessment and publishes free, evidence-based practitioner guidance.
+The project builds case-level records from public SEC filings, each linked to its source filing. It follows each event to the next annual assessment and develops free, evidence-based practitioner guidance.
 
-## Status
+## Status (October 31, 2026)
 
-- Research protocol v1.0: written, to be registered on OSF before the main analysis.
-- Pilot: 10-K filings dated March 3–6, 2025, used to develop the screening rules and reported separately.
+- Research protocol v1.2: written; to be registered on OSF before the main analysis.
+- Pilot: 10-K filings dated March 3–6, 2025, used to develop and test the screening rules and reported separately.
 - Main sample: 10-K filings dated in 2025. Not started.
+- Guidance: research brief v1.1 and evidence checklist draft v0.2, awaiting independent review.
 
 ## Website
 
 https://icfrtransitions.github.io
+
+## History
+
+Early drafts of this research were first posted in October 2026 on the investigator's practice website. The project moved to this independent, non-commercial home on October 31, 2026.
 
 ## Data and method
 
