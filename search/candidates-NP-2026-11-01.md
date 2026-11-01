@@ -1,0 +1,133 @@
+# NP candidate list, in seeded order
+
+ICFR Transitions Study. Protocol v1.4, section 5. Seed and rules: [sampling-seed-2026-11-01.md](sampling-seed-2026-11-01.md), committed before this list was ordered.
+
+**Published on November 1, 2026, before any eligibility check.**
+
+- **Pool:** 120 candidate filings: 107 from the automated screen and 13 from manual review (R0) confirmed by the investigator.
+- **After C1:** 118 issuer-events. Two 10-K/A amendments were merged with their originals (shown in the last column).
+- **Order:** sorted by accession number and shuffled with seed 20261103.
+- **Fingerprint:** SHA-256 of the ordered accession list `a80d4964874c0e6428a4a7eb8d7c8358dce048aef8a101b463dd28f042765840`.
+
+Passing the screen is not eligibility. The investigator checks each candidate in this order against protocol sections 3 and 6. Ineligible candidates are recorded with their reason. The first 30 eligible issuer-events form the NP sample.
+
+| Rank | Company | Filing | Form | Filed | Period | Source | Also in this issuer-event |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Sionna Therapeutics, Inc. | [0002036042-25-000005](https://www.sec.gov/Archives/edgar/data/2036042/000203604225000005/0002036042-25-000005-index.htm) | 10-K | 2025-03-20 | 2024-12-31 | screen |  |
+| 2 | Windstream Parent, Inc. | [0001410578-25-000432](https://www.sec.gov/Archives/edgar/data/2020795/000141057825000432/0001410578-25-000432-index.htm) | 10-K | 2025-03-24 | 2024-12-31 | screen |  |
+| 3 | PACS Group, Inc. | [0002001184-25-000068](https://www.sec.gov/Archives/edgar/data/2001184/000200118425000068/0002001184-25-000068-index.htm) | 10-K | 2025-11-19 | 2024-12-31 | screen |  |
+| 4 | Blackstone Infrastructure Strategies L | [0001193125-25-049864](https://www.sec.gov/Archives/edgar/data/2030772/000119312525049864/0001193125-25-049864-index.htm) | 10-K | 2025-03-07 | 2024-12-31 | R0 |  |
+| 5 | Ibotta, Inc. | [0001628280-25-008240](https://www.sec.gov/Archives/edgar/data/1538379/000162828025008240/0001628280-25-008240-index.htm) | 10-K | 2025-02-27 | 2024-12-31 | screen |  |
+| 6 | STARZ ENTERTAINMENT CORP /CN/ | [0000929351-25-000038](https://www.sec.gov/Archives/edgar/data/929351/000092935125000038/0000929351-25-000038-index.htm) | 10-K | 2025-06-26 | 2025-03-31 | screen |  |
+| 7 | Artiva Biotherapeutics, Inc. | [0000950170-25-043837](https://www.sec.gov/Archives/edgar/data/1817241/000095017025043837/0000950170-25-043837-index.htm) | 10-K | 2025-03-24 | 2024-12-31 | R0 |  |
+| 8 | New Mountain Net Lease Trust | [0001410578-25-000532](https://www.sec.gov/Archives/edgar/data/2033695/000141057825000532/0001410578-25-000532-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 9 | Anteris Technologies Global Corp. | [0001140361-25-008455](https://www.sec.gov/Archives/edgar/data/2011514/000114036125008455/0001140361-25-008455-index.htm) | 10-K | 2025-03-12 | 2024-12-31 | screen |  |
+| 10 | Zenas BioPharma, Inc. | [0001558370-25-002631](https://www.sec.gov/Archives/edgar/data/1953926/000155837025002631/0001558370-25-002631-index.htm) | 10-K | 2025-03-11 | 2024-12-31 | screen |  |
+| 11 | Marwynn Holdings, Inc. | [0001213900-25-073744](https://www.sec.gov/Archives/edgar/data/2030522/000121390025073744/0001213900-25-073744-index.htm) | 10-K | 2025-08-08 | 2025-04-30 | screen |  |
+| 12 | Marblegate Capital Corp | [0001193125-25-074703](https://www.sec.gov/Archives/edgar/data/1965052/000119312525074703/0001193125-25-074703-index.htm) | 10-K | 2025-04-07 | 2024-12-31 | screen |  |
+| 13 | Everus Construction Group, Inc. | [0002015845-25-000012](https://www.sec.gov/Archives/edgar/data/2015845/000201584525000012/0002015845-25-000012-index.htm) | 10-K | 2025-02-28 | 2024-12-31 | screen |  |
+| 14 | Capstone Holding Corp. | [0001213900-25-026436](https://www.sec.gov/Archives/edgar/data/887151/000121390025026436/0001213900-25-026436-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 15 | Cardio Diagnostics Holdings, Inc. | [0001079973-25-000428](https://www.sec.gov/Archives/edgar/data/1870144/000107997325000428/0001079973-25-000428-index.htm) | 10-K | 2025-03-20 | 2024-12-31 | screen |  |
+| 16 | Resolute Holdings Management, Inc. | [0001410578-25-000595](https://www.sec.gov/Archives/edgar/data/2039497/000141057825000595/0001410578-25-000595-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 17 | StandardAero, Inc. | [0000950170-25-037939](https://www.sec.gov/Archives/edgar/data/2025410/000095017025037939/0000950170-25-037939-index.htm) | 10-K | 2025-03-12 | 2024-12-31 | R0 |  |
+| 18 | Newsmax Inc. | [0002026478-25-000013](https://www.sec.gov/Archives/edgar/data/2026478/000202647825000013/0002026478-25-000013-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen | 0002026478-25-000015 10-K/A |
+| 19 | ALUMIS INC. | [0001847367-25-000012](https://www.sec.gov/Archives/edgar/data/1847367/000184736725000012/0001847367-25-000012-index.htm) | 10-K | 2025-03-19 | 2024-12-31 | screen |  |
+| 20 | Astera Labs, Inc. | [0001736297-25-000003](https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/0001736297-25-000003-index.htm) | 10-K | 2025-02-14 | 2024-12-31 | screen |  |
+| 21 | Bicara Therapeutics Inc. | [0002023658-25-000012](https://www.sec.gov/Archives/edgar/data/2023658/000202365825000012/0002023658-25-000012-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 22 | Central Plains Bancshares, Inc. | [0000950170-25-090434](https://www.sec.gov/Archives/edgar/data/1979332/000095017025090434/0000950170-25-090434-index.htm) | 10-K | 2025-06-26 | 2025-03-31 | R0 |  |
+| 23 | Franklin BSP Real Estate Debt, Inc. | [0001104659-25-029919](https://www.sec.gov/Archives/edgar/data/2035428/000110465925029919/0001104659-25-029919-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 24 | FirstEnergy Transmission, LLC | [0002038118-25-000004](https://www.sec.gov/Archives/edgar/data/2038118/000203811825000004/0002038118-25-000004-index.htm) | 10-K | 2025-02-27 | 2024-12-31 | screen |  |
+| 25 | Metsera, Inc. | [0000950170-25-044778](https://www.sec.gov/Archives/edgar/data/2040807/000095017025044778/0000950170-25-044778-index.htm) | 10-K | 2025-03-26 | 2024-12-31 | R0 |  |
+| 26 | StratCap Digital Infrastructure REIT, | [0001104659-25-046353](https://www.sec.gov/Archives/edgar/data/1868516/000110465925046353/0001104659-25-046353-index.htm) | 10-K | 2025-05-09 | 2024-12-31 | screen |  |
+| 27 | Monroe Federal Bancorp, Inc. | [0001558370-25-009080](https://www.sec.gov/Archives/edgar/data/2024899/000155837025009080/0001558370-25-009080-index.htm) | 10-K | 2025-07-03 | 2025-03-31 | screen |  |
+| 28 | KinderCare Learning Companies, Inc. | [0000950170-25-043210](https://www.sec.gov/Archives/edgar/data/1873529/000095017025043210/0000950170-25-043210-index.htm) | 10-K | 2025-03-21 | 2024-12-28 | screen |  |
+| 29 | WEBTOON Entertainment Inc. | [0001997859-25-000017](https://www.sec.gov/Archives/edgar/data/1997859/000199785925000017/0001997859-25-000017-index.htm) | 10-K | 2025-03-11 | 2024-12-31 | screen |  |
+| 30 | EQT Infrastructure Co LLC | [0001193125-25-068893](https://www.sec.gov/Archives/edgar/data/2032019/000119312525068893/0001193125-25-068893-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 31 | System1, Inc. | [0001628280-25-011690](https://www.sec.gov/Archives/edgar/data/1805833/000162828025011690/0001628280-25-011690-index.htm) | 10-K | 2025-03-10 | 2024-12-31 | screen |  |
+| 32 | Upstream Bio, Inc. | [0000950170-25-037621](https://www.sec.gov/Archives/edgar/data/2022626/000095017025037621/0000950170-25-037621-index.htm) | 10-K | 2025-03-12 | 2024-12-31 | screen |  |
+| 33 | Aardvark Therapeutics, Inc. | [0000950170-25-047835](https://www.sec.gov/Archives/edgar/data/1774857/000095017025047835/0000950170-25-047835-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | R0 |  |
+| 34 | AMERIGUARD SECURITY SERVICES, INC. | [0001829126-25-003553](https://www.sec.gov/Archives/edgar/data/1514443/000182912625003553/0001829126-25-003553-index.htm) | 10-K | 2025-05-12 | 2024-12-31 | screen |  |
+| 35 | SMITHFIELD FOODS INC | [0000091388-25-000017](https://www.sec.gov/Archives/edgar/data/91388/000009138825000017/0000091388-25-000017-index.htm) | 10-K | 2025-03-25 | 2024-12-29 | screen |  |
+| 36 | North Haven Net REIT | [0001999784-25-000017](https://www.sec.gov/Archives/edgar/data/1999784/000199978425000017/0001999784-25-000017-index.htm) | 10-K | 2025-02-24 | 2024-12-31 | screen |  |
+| 37 | BioAge Labs, Inc. | [0000950170-25-042759](https://www.sec.gov/Archives/edgar/data/1709941/000095017025042759/0000950170-25-042759-index.htm) | 10-K | 2025-03-20 | 2024-12-31 | R0 |  |
+| 38 | KESTRA MEDICAL TECHNOLOGIES, LTD. | [0000950170-25-096609](https://www.sec.gov/Archives/edgar/data/1877184/000095017025096609/0000950170-25-096609-index.htm) | 10-K | 2025-07-17 | 2025-04-30 | R0 |  |
+| 39 | ServiceTitan, Inc. | [0000950170-25-048834](https://www.sec.gov/Archives/edgar/data/1638826/000095017025048834/0000950170-25-048834-index.htm) | 10-K | 2025-04-02 | 2025-01-31 | R0 |  |
+| 40 | zSpace, Inc. | [0001558370-25-003867](https://www.sec.gov/Archives/edgar/data/1637147/000155837025003867/0001558370-25-003867-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 41 | Venu Holding Corp | [0001641172-25-001676](https://www.sec.gov/Archives/edgar/data/1770501/000164117225001676/0001641172-25-001676-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 42 | Fortress Net Lease REIT | [0001966394-25-000025](https://www.sec.gov/Archives/edgar/data/1966394/000196639425000025/0001966394-25-000025-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 43 | Millrose Properties, Inc. | [0001193125-25-068773](https://www.sec.gov/Archives/edgar/data/2017206/000119312525068773/0001193125-25-068773-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 44 | RenovoRx, Inc. | [0001641172-25-001932](https://www.sec.gov/Archives/edgar/data/1574094/000164117225001932/0001641172-25-001932-index.htm) | 10-K | 2025-04-01 | 2024-12-31 | screen |  |
+| 45 | CHAIN BRIDGE BANCORP INC | [0001392272-25-000019](https://www.sec.gov/Archives/edgar/data/1392272/000139227225000019/0001392272-25-000019-index.htm) | 10-K | 2025-03-21 | 2024-12-31 | screen |  |
+| 46 | Proficient Auto Logistics, Inc | [0001013762-25-004352](https://www.sec.gov/Archives/edgar/data/1998768/000101376225004352/0001013762-25-004352-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 47 | ACUREN CORP | [0002032966-25-000010](https://www.sec.gov/Archives/edgar/data/2032966/000203296625000010/0002032966-25-000010-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 48 | Smurfit Westrock plc | [0002005951-25-000005](https://www.sec.gov/Archives/edgar/data/2005951/000200595125000005/0002005951-25-000005-index.htm) | 10-K | 2025-03-07 | 2024-12-31 | screen |  |
+| 49 | Centuri Holdings, Inc. | [0001981599-25-000008](https://www.sec.gov/Archives/edgar/data/1981599/000198159925000008/0001981599-25-000008-index.htm) | 10-K | 2025-02-26 | 2024-12-29 | screen |  |
+| 50 | GE Vernova Inc. | [0001996810-25-000011](https://www.sec.gov/Archives/edgar/data/1996810/000199681025000011/0001996810-25-000011-index.htm) | 10-K | 2025-02-06 | 2024-12-31 | screen |  |
+| 51 | Sandisk Corp | [0002023554-25-000034](https://www.sec.gov/Archives/edgar/data/2023554/000202355425000034/0002023554-25-000034-index.htm) | 10-K | 2025-08-21 | 2025-06-27 | screen |  |
+| 52 | CaliberCos Inc. | [0001627282-25-000028](https://www.sec.gov/Archives/edgar/data/1627282/000162728225000028/0001627282-25-000028-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 53 | UL Solutions Inc. | [0001901440-25-000012](https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/0001901440-25-000012-index.htm) | 10-K | 2025-02-20 | 2024-12-31 | screen |  |
+| 54 | Primo Brands Corp | [0002042694-25-000003](https://www.sec.gov/Archives/edgar/data/2042694/000204269425000003/0002042694-25-000003-index.htm) | 10-K | 2025-02-27 | 2024-12-31 | screen |  |
+| 55 | OneStream, Inc. | [0000950170-25-029037](https://www.sec.gov/Archives/edgar/data/1889956/000095017025029037/0000950170-25-029037-index.htm) | 10-K | 2025-02-27 | 2024-12-31 | R0 |  |
+| 56 | Flowco Holdings Inc. | [0000950170-25-042288](https://www.sec.gov/Archives/edgar/data/2035149/000095017025042288/0000950170-25-042288-index.htm) | 10-K | 2025-03-20 | 2024-12-31 | screen |  |
+| 57 | Vivos Therapeutics, Inc. | [0001641172-25-001750](https://www.sec.gov/Archives/edgar/data/1716166/000164117225001750/0001641172-25-001750-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 58 | Principal Credit Real Estate Income Tr | [0002026448-25-000028](https://www.sec.gov/Archives/edgar/data/2026448/000202644825000028/0002026448-25-000028-index.htm) | 10-K | 2025-03-26 | 2024-12-31 | screen |  |
+| 59 | Linkhome Holdings Inc. | [0001013762-25-003420](https://www.sec.gov/Archives/edgar/data/2017758/000101376225003420/0001013762-25-003420-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 60 | Rain Enhancement Technologies Holdco, | [0001213900-25-032239](https://www.sec.gov/Archives/edgar/data/2028293/000121390025032239/0001213900-25-032239-index.htm) | 10-K | 2025-04-16 | 2024-12-31 | screen |  |
+| 61 | Maze Therapeutics, Inc. | [0000950170-25-047208](https://www.sec.gov/Archives/edgar/data/1842295/000095017025047208/0000950170-25-047208-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 62 | ALLURION TECHNOLOGIES, INC. | [0000950170-25-111978](https://www.sec.gov/Archives/edgar/data/1964979/000095017025111978/0000950170-25-111978-index.htm) | 10-K/A | 2025-08-28 | 2023-12-31 | screen |  |
+| 63 | INFINITY NATURAL RESOURCES, INC. | [0001193125-25-067100](https://www.sec.gov/Archives/edgar/data/2029118/000119312525067100/0001193125-25-067100-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 64 | FrontView REIT, Inc. | [0000950170-25-042774](https://www.sec.gov/Archives/edgar/data/1988494/000095017025042774/0000950170-25-042774-index.htm) | 10-K | 2025-03-20 | 2024-12-31 | R0 |  |
+| 65 | Aureus Greenway Holdings Inc | [0001641172-25-001168](https://www.sec.gov/Archives/edgar/data/2009312/000164117225001168/0001641172-25-001168-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 66 | Talen Energy Corp | [0001628280-25-008786](https://www.sec.gov/Archives/edgar/data/1622536/000162828025008786/0001628280-25-008786-index.htm) | 10-K | 2025-02-28 | 2024-12-31 | screen |  |
+| 67 | Ardent Health Partners, Inc. | [0001628280-25-008727](https://www.sec.gov/Archives/edgar/data/1756655/000162828025008727/0001628280-25-008727-index.htm) | 10-K | 2025-02-27 | 2024-12-31 | screen |  |
+| 68 | Brag House Holdings, Inc. | [0001213900-25-040732](https://www.sec.gov/Archives/edgar/data/1903595/000121390025040732/0001213900-25-040732-index.htm) | 10-K | 2025-05-07 | 2024-12-31 | screen |  |
+| 69 | Septerna, Inc. | [0000950170-25-045745](https://www.sec.gov/Archives/edgar/data/1984086/000095017025045745/0000950170-25-045745-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 70 | John Marshall Bancorp, Inc. | [0001558370-25-003982](https://www.sec.gov/Archives/edgar/data/1710482/000155837025003982/0001558370-25-003982-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 71 | Twin Hospitality Group Inc. | [0001628280-25-009131](https://www.sec.gov/Archives/edgar/data/2011954/000162828025009131/0001628280-25-009131-index.htm) | 10-K | 2025-02-28 | 2024-12-29 | screen |  |
+| 72 | FORTRESS CREDIT REALTY INCOME TRUST | [0000950170-25-046739](https://www.sec.gov/Archives/edgar/data/2026738/000095017025046739/0000950170-25-046739-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 73 | EQT Private Equity Co LLC | [0001193125-25-068914](https://www.sec.gov/Archives/edgar/data/2032020/000119312525068914/0001193125-25-068914-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 74 | Fifth District Bancorp, Inc. | [0001558370-25-003713](https://www.sec.gov/Archives/edgar/data/2012726/000155837025003713/0001558370-25-003713-index.htm) | 10-K | 2025-03-26 | 2024-12-31 | screen |  |
+| 75 | EBR Systems, Inc. | [0001214659-25-004709](https://www.sec.gov/Archives/edgar/data/1347123/000121465925004709/0001214659-25-004709-index.htm) | 10-K | 2025-03-24 | 2024-12-31 | screen |  |
+| 76 | Ceribell, Inc. | [0000950170-25-026773](https://www.sec.gov/Archives/edgar/data/1861107/000095017025026773/0000950170-25-026773-index.htm) | 10-K | 2025-02-25 | 2024-12-31 | screen |  |
+| 77 | Boundless Bio, Inc. | [0000950170-25-045725](https://www.sec.gov/Archives/edgar/data/1782303/000095017025045725/0000950170-25-045725-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | R0 |  |
+| 78 | SYNTEC OPTICS HOLDINGS, INC. | [0001493152-25-016960](https://www.sec.gov/Archives/edgar/data/1866816/000149315225016960/0001493152-25-016960-index.htm) | 10-K | 2025-10-06 | 2024-12-31 | screen |  |
+| 79 | Lineage, Inc. | [0001868159-25-000011](https://www.sec.gov/Archives/edgar/data/1868159/000186815925000011/0001868159-25-000011-index.htm) | 10-K | 2025-02-26 | 2024-12-31 | screen |  |
+| 80 | Southern States Bancshares, Inc. | [0001628280-25-012878](https://www.sec.gov/Archives/edgar/data/1689731/000162828025012878/0001628280-25-012878-index.htm) | 10-K | 2025-03-14 | 2024-12-31 | screen |  |
+| 81 | Channel Therapeutics Corp | [0001753926-25-000503](https://www.sec.gov/Archives/edgar/data/1919246/000175392625000503/0001753926-25-000503-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 82 | AMERIGUARD SECURITY SERVICES, INC. | [0001829126-25-003478](https://www.sec.gov/Archives/edgar/data/1514443/000182912625003478/0001829126-25-003478-index.htm) | 10-K/A | 2025-05-08 | 2023-12-31 | screen |  |
+| 83 | IBEX Ltd | [0001720420-25-000027](https://www.sec.gov/Archives/edgar/data/1720420/000172042025000027/0001720420-25-000027-index.htm) | 10-K | 2025-09-11 | 2025-06-30 | screen |  |
+| 84 | TWFG, Inc. | [0001628280-25-015138](https://www.sec.gov/Archives/edgar/data/2007596/000162828025015138/0001628280-25-015138-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 85 | Volcon, Inc. | [0001683168-25-002047](https://www.sec.gov/Archives/edgar/data/1829794/000168316825002047/0001683168-25-002047-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 86 | Zoomcar Holdings, Inc. | [0001213900-25-059675](https://www.sec.gov/Archives/edgar/data/1854275/000121390025059675/0001213900-25-059675-index.htm) | 10-K | 2025-06-30 | 2025-03-31 | screen |  |
+| 87 | Reddit, Inc. | [0001713445-25-000018](https://www.sec.gov/Archives/edgar/data/1713445/000171344525000018/0001713445-25-000018-index.htm) | 10-K | 2025-02-13 | 2024-12-31 | screen |  |
+| 88 | Endo, Inc. | [0002008861-25-000007](https://www.sec.gov/Archives/edgar/data/2008861/000200886125000007/0002008861-25-000007-index.htm) | 10-K | 2025-03-13 | 2024-12-31 | screen |  |
+| 89 | Vertical Data Inc. | [0001493152-25-029443](https://www.sec.gov/Archives/edgar/data/2033264/000149315225029443/0001493152-25-029443-index.htm) | 10-K | 2025-12-29 | 2025-09-30 | screen |  |
+| 90 | High Roller Technologies, Inc. | [0001437749-25-008652](https://www.sec.gov/Archives/edgar/data/1947210/000143774925008652/0001437749-25-008652-index.htm) | 10-K | 2025-03-21 | 2024-12-31 | screen |  |
+| 91 | Guardian Pharmacy Services, Inc. | [0001193125-25-064082](https://www.sec.gov/Archives/edgar/data/1802255/000119312525064082/0001193125-25-064082-index.htm) | 10-K | 2025-03-26 | 2024-12-31 | screen |  |
+| 92 | Silexion Therapeutics Corp | [0001178913-25-000887](https://www.sec.gov/Archives/edgar/data/2022416/000117891325000887/0001178913-25-000887-index.htm) | 10-K | 2025-03-18 | 2024-12-31 | screen |  |
+| 93 | Beta Bionics, Inc. | [0000950170-25-044516](https://www.sec.gov/Archives/edgar/data/1674632/000095017025044516/0000950170-25-044516-index.htm) | 10-K | 2025-03-25 | 2024-12-31 | screen | 0000950170-25-046762 10-K/A |
+| 94 | Karman Holdings Inc. | [0000950170-25-052639](https://www.sec.gov/Archives/edgar/data/2040127/000095017025052639/0000950170-25-052639-index.htm) | 10-K | 2025-04-10 | 2024-12-31 | screen |  |
+| 95 | Tempus AI, Inc. | [0000950170-25-025603](https://www.sec.gov/Archives/edgar/data/1717115/000095017025025603/0000950170-25-025603-index.htm) | 10-K | 2025-02-24 | 2024-12-31 | screen |  |
+| 96 | Seaport Entertainment Group Inc. | [0001558370-25-002600](https://www.sec.gov/Archives/edgar/data/2009684/000155837025002600/0001558370-25-002600-index.htm) | 10-K | 2025-03-10 | 2024-12-31 | screen |  |
+| 97 | Medicus Pharma Ltd. | [0001062993-25-006485](https://www.sec.gov/Archives/edgar/data/1997296/000106299325006485/0001062993-25-006485-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 98 | Phoenix Education Partners, Inc. | [0001193125-25-289786](https://www.sec.gov/Archives/edgar/data/1600222/000119312525289786/0001193125-25-289786-index.htm) | 10-K | 2025-11-20 | 2025-08-31 | screen |  |
+| 99 | YERBAE BRANDS CORP. | [0001493152-25-009611](https://www.sec.gov/Archives/edgar/data/1978133/000149315225009611/0001493152-25-009611-index.htm) | 10-K | 2025-03-10 | 2024-12-31 | screen |  |
+| 100 | Alpha Cognition Inc. | [0001213900-25-026225](https://www.sec.gov/Archives/edgar/data/1655923/000121390025026225/0001213900-25-026225-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 101 | Goldman Sachs Real Estate Finance Trus | [0002027537-25-000004](https://www.sec.gov/Archives/edgar/data/2027537/000202753725000004/0002027537-25-000004-index.htm) | 10-K | 2025-02-13 | 2024-12-31 | screen |  |
+| 102 | MBX Biosciences, Inc. | [0000950170-25-039838](https://www.sec.gov/Archives/edgar/data/1776111/000095017025039838/0000950170-25-039838-index.htm) | 10-K | 2025-03-17 | 2024-12-31 | screen |  |
+| 103 | BKV Corp | [0001628280-25-015622](https://www.sec.gov/Archives/edgar/data/1838406/000162828025015622/0001628280-25-015622-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 104 | Loar Holdings Inc. | [0000950170-25-047242](https://www.sec.gov/Archives/edgar/data/2000178/000095017025047242/0000950170-25-047242-index.htm) | 10-K | 2025-03-31 | 2024-12-31 | screen |  |
+| 105 | GIVEMEPOWER CORP | [0001641172-25-004864](https://www.sec.gov/Archives/edgar/data/1064722/000164117225004864/0001641172-25-004864-index.htm) | 10-K | 2025-04-15 | 2024-12-31 | screen |  |
+| 106 | Health In Tech, Inc. | [0001213900-25-024561](https://www.sec.gov/Archives/edgar/data/2019505/000121390025024561/0001213900-25-024561-index.htm) | 10-K | 2025-03-17 | 2024-12-31 | screen |  |
+| 107 | Curbline Properties Corp. | [0000950170-25-024834](https://www.sec.gov/Archives/edgar/data/2027317/000095017025024834/0000950170-25-024834-index.htm) | 10-K | 2025-02-21 | 2024-12-31 | R0 |  |
+| 108 | Rubrik, Inc. | [0001943896-25-000012](https://www.sec.gov/Archives/edgar/data/1943896/000194389625000012/0001943896-25-000012-index.htm) | 10-K | 2025-03-20 | 2025-01-31 | screen |  |
+| 109 | SailPoint, Inc. | [0002030781-25-000011](https://www.sec.gov/Archives/edgar/data/2030781/000203078125000011/0002030781-25-000011-index.htm) | 10-K | 2025-03-27 | 2025-01-31 | screen |  |
+| 110 | Toppoint Holdings Inc. | [0001213900-25-032145](https://www.sec.gov/Archives/edgar/data/1960847/000121390025032145/0001213900-25-032145-index.htm) | 10-K | 2025-04-15 | 2024-12-31 | screen |  |
+| 111 | TEN Holdings, Inc. | [0001641172-25-001303](https://www.sec.gov/Archives/edgar/data/2030954/000164117225001303/0001641172-25-001303-index.htm) | 10-K | 2025-03-28 | 2024-12-31 | screen |  |
+| 112 | Rapport Therapeutics, Inc. | [0000950170-25-036828](https://www.sec.gov/Archives/edgar/data/2012593/000095017025036828/0000950170-25-036828-index.htm) | 10-K | 2025-03-11 | 2024-12-31 | screen |  |
+| 113 | Solventum Corp | [0001964738-25-000019](https://www.sec.gov/Archives/edgar/data/1964738/000196473825000019/0001964738-25-000019-index.htm) | 10-K | 2025-02-28 | 2024-12-31 | screen |  |
+| 114 | FIVE STAR BANCORP | [0001275168-25-000038](https://www.sec.gov/Archives/edgar/data/1275168/000127516825000038/0001275168-25-000038-index.htm) | 10-K | 2025-02-28 | 2024-12-31 | screen |  |
+| 115 | Waystar Holding Corp. | [0001410578-25-000148](https://www.sec.gov/Archives/edgar/data/1990354/000141057825000148/0001410578-25-000148-index.htm) | 10-K | 2025-02-18 | 2024-12-31 | screen |  |
+| 116 | Camp4 Therapeutics Corp | [0001736730-25-000022](https://www.sec.gov/Archives/edgar/data/1736730/000173673025000022/0001736730-25-000022-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
+| 117 | Aether Holdings, Inc. | [0001493152-25-028195](https://www.sec.gov/Archives/edgar/data/2026353/000149315225028195/0001493152-25-028195-index.htm) | 10-K | 2025-12-17 | 2025-09-30 | screen |  |
+| 118 | Janover Inc. | [0001013762-25-003260](https://www.sec.gov/Archives/edgar/data/1805526/000101376225003260/0001013762-25-003260-index.htm) | 10-K | 2025-03-27 | 2024-12-31 | screen |  |
