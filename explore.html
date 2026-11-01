@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore | ICFR Transitions Project</title>
+<meta name="description" content="Interactive map of the ICFR Transitions study: the problem, the two transitions, the study pipeline, what existing work covers, the gap, the timeline and ways to extend the work.">
+<style>
+  :root { --ink:#1d2430; --muted:#5a6475; --line:#dde2ea; --accent:#1f5f8b; --bg:#ffffff; --soft:#f5f7fa; --accent-soft:#e4eef6;
+    --aq:#1f5f8b; --np:#6b4fa0; --yes:#2f7d5b; --part:#c8962b; --no:#e9ecf1; --no-ink:#8a94a3; --gap:#b8432b; --gap-soft:#fbebe7;
+    --done:#2f7d5b; --prog:#c8962b; --todo:#8a94a3; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8ecf2; --muted:#a6b0bf; --line:#2c3442; --accent:#7fb6dd; --bg:#12161d; --soft:#1a2029; --accent-soft:#1d3245;
+    --aq:#7fb6dd; --np:#b49ae0; --yes:#5fbf8f; --part:#e0b252; --no:#252d38; --no-ink:#7d8898; --gap:#f08a72; --gap-soft:#3a2420;
+    --done:#5fbf8f; --prog:#e0b252; --todo:#7d8898; --on-accent:#12161d; color-scheme: dark; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.6 Georgia, "Times New Roman", serif; color:var(--ink); background:var(--bg); }
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 20px 64px; }
+  .ui { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  nav.site { font: 14px/1.4 system-ui, sans-serif; margin-bottom: 28px; }
+  nav.site a { margin-right: 14px; }
+  .kicker { font: 600 13px/1.4 system-ui, sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1 { font-size: 32px; line-height:1.2; margin: 0 0 12px; }
+  h2 { font: 700 22px/1.3 Georgia, serif; margin: 0 0 6px; }
+  h3 { font: 700 16px/1.4 system-ui, sans-serif; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 70ch; }
+  a { color: var(--accent); }
+  .muted { color: var(--muted); }
+  .small { font: 14px/1.55 system-ui, sans-serif; color: var(--muted); }
+  .note { font: 14px/1.6 system-ui, sans-serif; color: var(--muted); background:var(--soft); border-left:3px solid var(--accent); padding:12px 14px; border-radius:4px; margin: 16px 0; }
+  .tag { font: 600 11px/1 system-ui, sans-serif; padding:3px 6px; border-radius:3px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
+  footer { margin-top:48px; font: 13px/1.6 system-ui, sans-serif; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+
+  /* View tabs */
+  .tabs { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; border-bottom: 1px solid var(--line); margin: 20px 0 26px; scrollbar-width: thin; }
+  .tabs button { font: 600 14px/1 system-ui, sans-serif; border: 1px solid var(--line); background: var(--soft); color: var(--ink); padding: 9px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+  .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .tabs button:focus-visible, .node:focus-visible, .chip-btn:focus-visible, .step:focus-visible, .stage:focus-visible, .srow:focus-visible, .ext:focus-visible, .ti:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .view[hidden] { display: none !important; }
+  .view { display: grid; gap: 22px; }
+  .vhead { display: grid; gap: 4px; max-width: 74ch; }
+
+  /* Flowchart (overview) */
+  .flow { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; align-items: stretch; }
+  @media (max-width: 820px) { .flow { grid-template-columns: 1fr; } }
+  .flowcol { display: grid; gap: 10px; align-content: start; padding: 0 14px; position: relative; }
+  .flowcol + .flowcol::before { content: "→"; position: absolute; left: -9px; top: 34px; color: var(--muted); font: 600 18px system-ui; }
+  @media (max-width: 820px) { .flowcol { padding: 12px 0; } .flowcol + .flowcol::before { content: "↓"; left: 50%; top: -12px; } }
+  .colhead { font: 600 12px/1.3 system-ui, sans-serif; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  .node { text-align: left; font: 15px/1.4 system-ui, sans-serif; background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; cursor: pointer; color: var(--ink); width: 100%; }
+  .node:hover { border-color: var(--accent); }
+  .node.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .node.gapnode { background: var(--gap-soft); border: 2px dashed var(--gap); }
+  .node.us { background: var(--accent-soft); border-color: var(--accent); }
+  .node small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .drill { border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; background: var(--bg); font: 15.5px/1.6 system-ui, sans-serif; }
+  .drill h3 { font-size: 17px; }
+  .drill ul { margin: 6px 0 8px; padding-left: 20px; }
+  .drill li { margin: 3px 0; }
+  .drill .src { font-size: 13px; color: var(--muted); }
+
+  /* Solved / remains */
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+  @media (max-width: 820px) { .three { grid-template-columns: 1fr; } }
+  .col { border-radius: 10px; padding: 16px 18px; font: 15px/1.55 system-ui, sans-serif; border: 1px solid var(--line); }
+  .col h3 { display: flex; gap: 8px; align-items: center; }
+  .col ul { margin: 6px 0 0; padding-left: 18px; }
+  .col li { margin: 5px 0; }
+  .col.solved { background: var(--soft); }
+  .col.remains { background: var(--gap-soft); border-color: transparent; }
+  .col.ours { background: var(--accent-soft); border-color: transparent; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+
+  /* Transitions stepper */
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .seg button { font: 600 14px/1 system-ui, sans-serif; border: none; background: transparent; color: var(--ink); padding: 9px 14px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+  .stepper { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; position: relative; }
+  @media (max-width: 760px) { .stepper { grid-template-columns: 1fr; } }
+  .step { text-align: left; border: 1px solid var(--line); background: var(--bg); color: var(--ink); padding: 14px; font: 14.5px/1.4 system-ui, sans-serif; cursor: pointer; position: relative; }
+  .step + .step { border-left: none; }
+  @media (max-width: 760px) { .step + .step { border-left: 1px solid var(--line); border-top: none; } }
+  .step .when { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+  .step b { display: block; }
+  .step .rec { display: inline-block; margin-top: 6px; font-size: 11.5px; color: var(--accent); }
+  .step.sel { background: var(--accent-soft); box-shadow: inset 0 3px 0 var(--accent); }
+  .exbox { border: 1px dashed var(--line); border-radius: 8px; padding: 12px 14px; font: 14.5px/1.55 system-ui, sans-serif; }
+
+  /* Pipeline */
+  .pipe { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; counter-reset: s; }
+  @media (max-width: 760px) { .pipe { grid-template-columns: 1fr; } }
+  .stage { text-align: left; border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--soft); color: var(--ink); cursor: pointer; font: 15px/1.4 system-ui, sans-serif; display: grid; gap: 6px; position: relative; }
+  .stage .n { font: 700 13px/1 system-ui; color: var(--muted); }
+  .stage.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--bg); }
+  .st { font: 600 11.5px/1 system-ui, sans-serif; padding: 4px 7px; border-radius: 999px; border: 1px solid currentColor; justify-self: start; }
+  .st.done { color: var(--done); } .st.prog { color: var(--prog); } .st.todo { color: var(--todo); }
+  .iodo { display: grid; grid-template-columns: minmax(0,1fr) 20px minmax(0,1fr) 20px minmax(0,1fr); gap: 6px; align-items: stretch; margin: 10px 0; }
+  @media (max-width: 640px) { .iodo { grid-template-columns: 1fr; } .iodo .ar { transform: rotate(90deg); } }
+  .io { border: 1px solid var(--line); border-radius: 6px; padding: 9px 10px; font-size: 14px; }
+  .io.mid { background: var(--accent-soft); border-color: transparent; }
+  .io .k { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .ar { display: flex; align-items: center; justify-content: center; color: var(--muted); }
+  .progress { display: grid; grid-template-columns: repeat(9, minmax(0,1fr)); gap: 4px; }
+  .progress span { height: 10px; border-radius: 2px; }
+
+  /* Gap */
+  .gapgrid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; align-items: start; }
+  @media (max-width: 820px) { .gapgrid { grid-template-columns: 1fr; } }
+  .gauge { display: grid; gap: 10px; justify-items: center; text-align: center; }
+  .gauge svg { width: 100%; max-width: 240px; height: auto; }
+  .bigpct { font: 700 40px/1 Georgia, serif; }
+  .barrow { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0,1fr) 60px; gap: 10px; align-items: center; font: 14px/1.3 system-ui, sans-serif; margin: 7px 0; }
+  @media (max-width: 560px) { .barrow { grid-template-columns: 1fr 52px; } .barrow .bl { grid-column: 1 / -1; } }
+  .track { height: 20px; background: var(--no); border-radius: 4px; overflow: hidden; display: flex; }
+  .track span { height: 100%; transition: width .35s ease; }
+  .pct { font: 600 13px/1 ui-monospace, Menlo, monospace; text-align: right; font-variant-numeric: tabular-nums; }
+  .barrow.zero .bl, .barrow.zero .pct { color: var(--gap); font-weight: 700; }
+  .scroll { overflow-x: auto; }
+  table.heat { border-collapse: separate; border-spacing: 3px; min-width: 760px; width: 100%; font: 12.5px/1.25 system-ui, sans-serif; }
+  table.heat th { font-weight: 600; color: var(--muted); text-align: center; vertical-align: bottom; padding: 4px; }
+  table.heat th:first-child { text-align: left; }
+  table.heat td { padding: 7px 6px; border-radius: 4px; text-align: center; }
+  table.heat td.s { text-align: left; padding-left: 0; }
+  .srow { cursor: pointer; }
+  .srow:hover td.s { color: var(--accent); }
+  .srow.sel td.s { color: var(--accent); font-weight: 700; }
+  td.Y { background: var(--yes); color: #fff; } td.P { background: var(--part); color: #1d2430; } td.N { background: var(--no); color: var(--no-ink); }
+  td.U { border: 1px dashed var(--line); color: var(--no-ink); } td.S { background: var(--accent-soft); color: var(--accent); border: 1px dashed var(--accent); }
+  th.gapcol { color: var(--gap) !important; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; font: 13px system-ui, sans-serif; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+  /* Timeline */
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip-btn { font: 600 13px/1 system-ui, sans-serif; border: 1px solid var(--line); background: var(--soft); color: var(--ink); padding: 8px 11px; border-radius: 999px; cursor: pointer; }
+  .chip-btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .tl { list-style: none; margin: 0; padding: 0; }
+  .ti { display: grid; grid-template-columns: 110px 22px minmax(0,1fr); gap: 12px; cursor: pointer; background: none; border: none; color: inherit; text-align: left; width: 100%; padding: 0; font: inherit; }
+  .ti .d { font: 600 13px/1.3 ui-monospace, Menlo, monospace; color: var(--muted); text-align: right; padding-top: 11px; }
+  .ti .rail { position: relative; }
+  .ti .rail::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+  .ti .rail i { position: absolute; left: 4px; top: 12px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--bg); }
+  .ti .body { padding: 8px 0 14px; font: 15px/1.45 system-ui, sans-serif; }
+  .ti .body .more { display: none; color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .ti[aria-expanded="true"] .more { display: block; }
+  .ti.today .d, .ti.today b { color: var(--gap); }
+  .lane { font: 600 10.5px/1 system-ui; text-transform: uppercase; letter-spacing: .05em; padding: 3px 6px; border-radius: 3px; margin-right: 6px; }
+  .lane.ex { background: var(--no); color: var(--no-ink); } .lane.pr { background: var(--accent-soft); color: var(--accent); }
+
+  /* Extend */
+  .extgrid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  @media (max-width: 760px) { .extgrid { grid-template-columns: 1fr; } }
+  .ext { text-align: left; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: var(--soft); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; cursor: pointer; display: grid; gap: 6px; }
+  .ext .more { display: none; font-size: 14px; color: var(--muted); }
+  .ext[aria-expanded="true"] { background: var(--bg); border-color: var(--accent); }
+  .ext[aria-expanded="true"] .more { display: block; }
+  .ext .row { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+  .plus { font: 700 18px/1 system-ui; color: var(--muted); }
+  .ext[aria-expanded="true"] .plus { transform: rotate(45deg); }
+  @media (prefers-reduced-motion: reduce) { .track span { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+<nav class="site"><a href="index.html">Home</a><a href="research.html">Research program</a><a href="acquisition-exclusion.html">Brief</a><a href="checklist.html">Checklist</a><a href="explore.html" aria-current="page">Explore</a></nav>
+<p class="kicker">Interactive map &middot; status October 31, 2026</p>
+<h1>Explore the ICFR Transitions study</h1>
+<p class="lead">The problem, the two transitions, how the study runs, what existing work already covers, how large the gap is, where the work stands, and how it could be taken further. Select any box to see more.</p>
+
+<div class="tabs ui" role="tablist" aria-label="Views">
+  <button role="tab" id="t-overview" aria-controls="overview">Overview</button>
+  <button role="tab" id="t-transitions" aria-controls="transitions">Two transitions</button>
+  <button role="tab" id="t-pipeline" aria-controls="pipeline">Study pipeline</button>
+  <button role="tab" id="t-gap" aria-controls="gap">Coverage and gap</button>
+  <button role="tab" id="t-timeline" aria-controls="timeline">Timeline</button>
+  <button role="tab" id="t-extend" aria-controls="extend">Further work</button>
+</div>
+
+<!-- OVERVIEW -->
+<section class="view" id="overview" role="tabpanel" aria-labelledby="t-overview">
+  <div class="vhead"><h2>From problem to output</h2><p class="small">Read left to right. Each box opens its detail below the chart.</p></div>
+  <div class="flow" id="flow"></div>
+  <div class="drill" id="flow-drill" aria-live="polite"></div>
+  <div class="vhead"><h2>Settled, open, and where this study stands</h2></div>
+  <div class="three">
+    <div class="col solved"><h3><span class="dot" style="background:var(--yes)"></span>Settled by existing work</h3><ul>
+      <li>The rules: when an acquired business may be excluded, and for how long (SEC staff FAQ Q3; FRM 4310.11).</li>
+      <li>When a newly public company may omit management's report (FRM 4310.6).</li>
+      <li>How auditors treat the exclusion (PCAOB AS 2201).</li>
+      <li>That material weaknesses are common around IPOs, in aggregate (KPMG; Audit Analytics).</li>
+      <li>Who tends to use the acquisition exemption, in aggregate (Kravet, McVay &amp; Weber, 2018).</li></ul></div>
+    <div class="col remains"><h3><span class="dot" style="background:var(--gap)"></span>Still open</h3><ul>
+      <li>Free records, company by company, linked to the filings.</li>
+      <li>How large excluded businesses are, case by case.</li>
+      <li>Whether each excluded business enters the next assessment.</li>
+      <li>One method that follows both transitions to the next assessment.</li>
+      <li>How long disclosed remediation takes, from checkable filings.</li>
+      <li>Practical steps traced to observed cases.</li></ul></div>
+    <div class="col ours"><h3><span class="dot" style="background:var(--accent)"></span>This study, today</h3><ul>
+      <li>Protocol v1.4 written; registration on OSF is next.</li>
+      <li>Pilot: 33 candidate filings screened; 12 company-events verified.</li>
+      <li>Draft brief v1.1 and draft checklist v0.2 published for comment.</li>
+      <li><b>No findings published yet.</b> The open questions are answered only when the main sample is coded, checked and released.</li></ul></div>
+  </div>
+</section>
+
+<!-- TRANSITIONS -->
+<section class="view" id="transitions" role="tabpanel" aria-labelledby="t-transitions" hidden>
+  <div class="vhead"><h2>The two transitions</h2><p class="small">Choose a transition, then a step. The marked steps are where the study's records start and end.</p></div>
+  <div class="seg ui" role="group" aria-label="Transition"><button id="seg-aq" aria-pressed="true">Acquired operations</button><button id="seg-np" aria-pressed="false">Newly public companies</button></div>
+  <div class="stepper" id="stepper"></div>
+  <div class="drill" id="step-drill" aria-live="polite"></div>
+</section>
+
+<!-- PIPELINE -->
+<section class="view" id="pipeline" role="tabpanel" aria-labelledby="t-pipeline" hidden>
+  <div class="vhead"><h2>How the study runs</h2><p class="small">Nine stages from search to release. Select a stage for what goes in, what is done, what comes out and the evidence for its status.</p></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="legend"><span><i style="background:var(--done)"></i>Done</span><span><i style="background:var(--prog)"></i>In progress</span><span><i style="background:var(--todo)"></i>Not started</span></div>
+  <div class="pipe" id="pipe"></div>
+  <div class="drill" id="pipe-drill" aria-live="polite"></div>
+</section>
+
+<!-- GAP -->
+<section class="view" id="gap" role="tabpanel" aria-labelledby="t-gap" hidden>
+  <div class="vhead"><h2>What existing work covers, and how large the gap is</h2>
+  <p class="small">Eleven sources were opened in a first-pass review (October 28, 2026). Each was checked against six points. The percentages below are computed from that grid; switch the counting rule to see how they change.</p></div>
+  <div class="seg ui" role="group" aria-label="Counting rule"><button id="rule-strict" aria-pressed="true">Count full coverage only</button><button id="rule-loose" aria-pressed="false">Count partial coverage too</button></div>
+  <div class="gapgrid">
+    <div class="gauge">
+      <svg id="gauge" viewBox="0 0 200 200" role="img" aria-label="Share of source-and-point checks not covered"></svg>
+      <div><div class="bigpct" id="gap-pct"></div><div class="small" id="gap-cap"></div></div>
+    </div>
+    <div>
+      <h3>Coverage of each point, across 11 sources</h3>
+      <div id="bars"></div>
+      <p class="small" id="core-line"></p>
+    </div>
+  </div>
+  <div class="note"><b>What the percentages mean.</b> 11 sources × 6 points = 66 checks. The large figure is the share of those checks with no coverage (the 2 checks the source does not document are counted as not covered). The figure that matters most for this study is the first bar in red: free, case-level data, which no reviewed source provides. These are measures of a first-pass review, not of all literature; paywalled handbooks, the full Audit Analytics data dictionary and full academic papers are still to be checked.</div>
+  <h3>Source by source</h3>
+  <p class="small">Select a source to see what it covers and what it lacks.</p>
+  <div class="scroll"><table class="heat" id="heat"></table></div>
+  <div class="legend"><span><i style="background:var(--yes)"></i>Yes</span><span><i style="background:var(--part)"></i>Partly</span><span><i style="background:var(--no)"></i>No</span><span><i style="border:1px dashed var(--line)"></i>Not documented</span><span><i style="background:var(--accent-soft);border:1px dashed var(--accent)"></i>Planned by this study</span></div>
+  <div class="drill" id="src-drill" aria-live="polite"></div>
+</section>
+
+<!-- TIMELINE -->
+<section class="view" id="timeline" role="tabpanel" aria-labelledby="t-timeline" hidden>
+  <div class="vhead"><h2>What happened where, and what comes next</h2><p class="small">Existing work since 2007 and this study's own steps, in date order. Select an entry for detail. Spacing is not to scale.</p></div>
+  <div class="filters ui" role="group" aria-label="Filter timeline"><button class="chip-btn" data-f="all" aria-pressed="true">All</button><button class="chip-btn" data-f="ex" aria-pressed="false">Existing work</button><button class="chip-btn" data-f="pr" aria-pressed="false">This study</button></div>
+  <ol class="tl" id="tl"></ol>
+  <p class="small">The only fixed future dates are the two in the protocol: the December 31, 2026 observation cutoff and the June 30, 2027 completion target.</p>
+</section>
+
+<!-- EXTEND -->
+<section class="view" id="extend" role="tabpanel" aria-labelledby="t-extend" hidden>
+  <div class="vhead"><h2>How the work could be taken further</h2><p class="small">Directions that follow from the study's design and its stated limits. Each says whether it is part of the current protocol. Select one for what it would involve.</p></div>
+  <div class="extgrid" id="ext"></div>
+  <div class="note">Researchers and practitioners who want to take up any of these, or to review, test or second-code, are welcome to write to <span class="ui">icfrtransitions@gmail.com</span>. Released data will carry a DOI and a CC BY 4.0 licence so it can be reused.</div>
+</section>
+
+<div class="note"><strong>Educational use only.</strong> Not audit, accounting or legal advice. Not affiliated with, reviewed by or endorsed by the SEC, the PCAOB or any company discussed. Public filings only; no confidential employer or client information. This project is non-commercial and offers no services.</div>
+<footer>Mian Sajjad Ur Rehman &middot; <a href="https://orcid.org/0009-0003-2396-7679">ORCID 0009-0003-2396-7679</a> &middot; icfrtransitions@gmail.com<br>Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source and change history: <a href="https://github.com/icfrtransitions/icfrtransitions.github.io">GitHub</a>. Sources for this page: research protocol v1.4 and the project's existing-guidance comparison of October 28, 2026.</footer>
+</main>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+
+  // ---------- Tabs with hash routing ----------
+  var views = ['overview', 'transitions', 'pipeline', 'gap', 'timeline', 'extend'];
+  function show(v) {
+    if (views.indexOf(v) < 0) v = 'overview';
+    views.forEach(function (x) { $(x).hidden = x !== v; $('t-' + x).setAttribute('aria-selected', x === v ? 'true' : 'false'); });
+  }
+  views.forEach(function (x) { $('t-' + x).addEventListener('click', function () { if (location.hash !== '#' + x) location.hash = x; else show(x); }); });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+
+  // ---------- Overview flowchart ----------
+  var flow = [
+    { h: 'The problem', items: [
+      { id: 'p1', t: 'Weaknesses are common at IPO', s: '44% of 2023 IPOs', d: '<p>KPMG reviewed 122 traditional U.S. IPOs from 2023. 54 (44%) disclosed a material weakness in their registration statement, and 14 of those did not disclose it again in their first 10-K. Across 2021–2023, 253 of 569 IPOs (46.4%) disclosed weaknesses at registration.</p><p class="src">Source: <a href="https://kpmg.com/us/en/articles/2025/2024-ipo-material-weakness-study.html">KPMG, June 2025</a>. Totals only; no company list.</p>' },
+      { id: 'p2', t: 'First assessments can fail', s: '12% → 21% ineffective', d: '<p>Audit Analytics followed IPO companies to their first management ICFR report. The share reporting ineffective controls rose from 12% in 2010 to 21% in 2018. Most were effective by the next report.</p><p class="src">Source: <a href="https://blog.auditanalytics.com/internal-control-weaknesses-following-an-ipo/">Audit Analytics, Sept. 2020</a>. Underlying data sold by subscription.</p>' },
+      { id: 'p3', t: 'Acquired businesses get one year', s: 'Then they must be assessed', d: '<p>Management may leave a recently acquired business out of its ICFR assessment only if it could not be assessed in time, for no more than one year and one annual report, and must name it and state its significance. The business stays in the consolidated financial statements throughout.</p><p class="src">Sources: <a href="https://www.sec.gov/oca/controlfaq">SEC staff ICFR FAQ, Question 3</a>; <a href="https://www.sec.gov/about/divisions-offices/division-corporation-finance/financial-reporting-manual/frm-topic-4">FRM 4310.11</a>.</p>' } ] },
+    { h: 'What exists', items: [
+      { id: 'e1', t: 'Rules', s: 'SEC, PCAOB', d: '<p>The SEC staff FAQ, the Financial Reporting Manual and PCAOB AS 2201 say what is allowed and how auditors respond. They publish no data on what companies actually do.</p>' },
+      { id: 'e2', t: 'Totals', s: 'KPMG, Audit Analytics, academic papers', d: '<p>Studies report rates and averages. KPMG and Audit Analytics cover newly public companies; Kravet, McVay &amp; Weber (2018) cover the acquisition exemption. None publishes a free company list.</p>' },
+      { id: 'e3', t: 'Advice', s: 'Big 4 and practitioner articles', d: '<p>General readiness and integration steps, such as planning milestones and aligning controls after a deal. They cite no company cases behind the steps.</p>' } ] },
+    { h: 'The gap', items: [
+      { id: 'g1', gap: true, t: 'No free, case-level follow-through', s: '0 of 11 sources reviewed', d: '<p>None of the 11 sources reviewed publishes free, company-by-company records linked to the filings. None reports, case by case, how large excluded businesses are or whether they enter the next assessment. None follows both transitions with one method.</p><p class="src">See the Coverage and gap view for the full grid and percentages.</p>' } ] },
+    { h: 'This study', items: [
+      { id: 'u1', us: true, t: 'Method', s: 'SEC filings, 3 linked records', d: '<p>Fixed searches of EDGAR, written screening rules and hand verification of Item 9A. Each case has an issuer-event record, a record for each excluded business and a record for each weakness, all linked to filings. A fixed random sample of 30 per transition, followed to the next annual report.</p>' },
+      { id: 'u2', us: true, t: 'Outputs', s: 'Data, report, guidance', d: '<p>A free dataset, a report and practitioner tools (checklist, readiness plan, remediation tracker, scoping worksheet), each step tagged as a requirement, an observed pattern or judgment. Tools are released only after written technical review and a usability test.</p>' },
+      { id: 'u3', us: true, t: 'Who can use it', s: 'Controllers, audit committees, auditors, researchers', d: '<p>Finance and internal-audit teams planning an integration or a first assessment; audit committee members; smaller audit firms; and researchers who can check and extend the case records.</p>' } ] }
+  ];
+  var fhost = $('flow'), fdrill = $('flow-drill'), allNodes = [];
+  flow.forEach(function (c) {
+    var col = document.createElement('div'); col.className = 'flowcol';
+    col.innerHTML = '<span class="colhead">' + c.h + '</span>';
+    c.items.forEach(function (it) {
+      var b = document.createElement('button'); b.className = 'node' + (it.gap ? ' gapnode' : '') + (it.us ? ' us' : '');
+      b.innerHTML = '<b>' + it.t + '</b><small>' + it.s + '</small>';
+      b.addEventListener('click', function () { allNodes.forEach(function (n) { n.b.classList.remove('sel'); n.b.setAttribute('aria-pressed', 'false'); }); b.classList.add('sel'); b.setAttribute('aria-pressed', 'true'); fdrill.innerHTML = '<h3>' + it.t + '</h3>' + it.d; });
+      allNodes.push({ b: b, it: it }); col.appendChild(b);
+    });
+    fhost.appendChild(col);
+  });
+  allNodes.filter(function (n) { return n.it.id === 'g1'; })[0].b.click();
+
+  // ---------- Transitions stepper ----------
+  var T = {
+    aq: [
+      { w: 'Day 0', t: 'Acquisition closes', r: '', d: '<p>The acquired business joins the consolidated financial statements immediately. Its controls are not yet part of the parent\'s ICFR program.</p>' },
+      { w: 'First year-end', t: 'Excluded from the assessment', r: 'Record starts', d: '<p>Allowed only if the business could not be assessed in time. Management must name it and state its significance, and still disclose material changes in ICFR from the acquisition. Where an auditor\'s ICFR opinion is required, the auditor may exclude it too and must judge whether the exclusion is reasonable.</p><p><b>Recorded:</b> each excluded business, its significance exactly as disclosed, management scope and auditor scope separately, and whether it was already excluded the year before.</p>' },
+      { w: 'Next annual report', t: 'Brought into the assessment', r: 'Inclusion coded', d: '<p>No more than one year from the acquisition and one annual report. <b>Recorded:</b> one of five codes, from management\'s report: explicit inclusion, inferred inclusion, continued exclusion, indeterminate, or follow-up unavailable.</p>' },
+      { w: 'Later filings', t: 'Weaknesses and remediation', r: '', d: '<p>Each material weakness gets its own record: category, whether the filing ties it to the acquired business, first observed disclosure, stages described (planned, implemented, operating, tested, remediated) and the first period reported as remediated.</p>' } ],
+    np: [
+      { w: 'Listing', t: 'Company goes public', r: '', d: '<p>By IPO, spin-off registered on Form 10, or SPAC merger. Weaknesses may already be disclosed in the registration statement, which is where the study looks back for weaknesses present at entry.</p>' },
+      { w: 'First 10-K', t: 'Management\'s report omitted', r: 'Record starts', d: '<p>A newly public company need not give management\'s ICFR report until it has filed, or was required to file, an annual report for the prior year (FRM 4310.6). The 10-K must include the transition statement instead. The study checks both conditions.</p>' },
+      { w: 'Second 10-K', t: 'First management assessment', r: 'Transition closes', d: '<p>Management concludes ICFR is effective or not effective. An auditor attestation is required only for some filers. <b>Recorded:</b> the disclosure-controls conclusion, management\'s report and conclusion, and weaknesses, as separate fields.</p>' },
+      { w: 'Later filings', t: 'Weaknesses and remediation', r: '', d: '<p>Each weakness is followed to the first period management reports it remediated. Remediation time is counted in fiscal periods, not from filing dates.</p>' } ]
+  };
+  var EX = {
+    aq: '<div class="exbox"><b>Worked example from the pilot: Allient Inc.</b> Its FY2024 10-K (filed March 5, 2025) excluded SNC Manufacturing, acquired January 11, 2024: 9% of net assets, 5% of total assets and 7% of revenue. The FY2025 10-K (filed March 5, 2026) concluded ICFR was effective and mentioned no exclusion, without stating SNC was now included. Code: <i>inferred inclusion</i>.</div>',
+    np: '<div class="exbox"><b>Worked example from the pilot: Concentra Group Holdings.</b> Its FY2024 10-K (filed March 3, 2025) omitted management\'s report after a July 2024 IPO. The FY2025 10-K (filed February 26, 2026) gave the first assessment, effective, with an auditor attestation, and excluded two 2025 acquisitions. One company can move from one transition into the other.</div>'
+  };
+  var cur = 'aq', stepper = $('stepper'), sdrill = $('step-drill');
+  function renderSteps(k, sel) {
+    cur = k; $('seg-aq').setAttribute('aria-pressed', k === 'aq'); $('seg-np').setAttribute('aria-pressed', k === 'np');
+    stepper.innerHTML = '';
+    T[k].forEach(function (s, i) {
+      var b = document.createElement('button'); b.className = 'step' + (i === sel ? ' sel' : '');
+      b.innerHTML = '<span class="when">' + s.w + '</span><b>' + s.t + '</b>' + (s.r ? '<span class="rec">● ' + s.r + '</span>' : '');
+      b.addEventListener('click', function () { renderSteps(k, i); });
+      stepper.appendChild(b);
+    });
+    sdrill.innerHTML = '<h3>' + T[k][sel].t + '</h3>' + T[k][sel].d + EX[k];
+  }
+  $('seg-aq').addEventListener('click', function () { renderSteps('aq', 1); });
+  $('seg-np').addEventListener('click', function () { renderSteps('np', 1); });
+  renderSteps('aq', 1);
+
+  // ---------- Pipeline ----------
+  var S = [
+    { t: 'Set up and register', s: 'prog', i: 'Questions, rules, public identity', d: 'Write the protocol; publish the site; register on OSF', o: 'Public, dated plan', e: 'Protocol v1.4 written; project site and ORCID record live. Registration on OSF is next.' },
+    { t: 'Find candidate filings', s: 'prog', i: '10-K filings on EDGAR', d: 'Fixed full-text searches and a written screen', o: 'Candidates with reasons', e: 'Pilot A: 33 candidate rows from filings of March 3–5, 2025. Pilot B: 15 rows screened from March 6, 2025. Search validation on a fresh sample comes before the 2025 screen.' },
+    { t: 'Select the fixed sample', s: 'todo', i: 'Eligible candidates', d: 'Random order; first 30 eligible per transition; no substitution', o: 'Published sample list', e: 'Starts after registration and search validation.' },
+    { t: 'Code and verify', s: 'todo', i: 'Item 9A, auditor report, notes', d: 'Three linked records per case, each value tied to its filing', o: 'Verified case records', e: 'Pilot: 12 verified company-events (3 newly public, 9 acquisition, about 30 acquired businesses). Main-sample coding not started.' },
+    { t: 'Follow to next report', s: 'todo', i: 'Next 10-K by Dec 31, 2026', d: 'Inclusion status, first assessment, remediation', o: 'Complete case histories', e: 'Observation cutoff December 31, 2026.' },
+    { t: 'Quality checks', s: 'todo', i: 'Coded sample; excluded filings', d: 'Independent second coder; quarterly exclusion audit', o: 'Agreement rates; audit results', e: 'Second coder and reviewers not yet recruited.' },
+    { t: 'Analyze', s: 'todo', i: 'Verified records', d: 'Five research questions, descriptive only', o: 'Counts, patterns, case histories', e: 'No findings published yet. Target completion June 30, 2027.' },
+    { t: 'Build and test guidance', s: 'prog', i: 'Rules and observed patterns', d: 'Draft tools; written technical review; usability test with 3+ practitioners', o: 'Reviewed, tested tools', e: 'Public drafts: brief v1.1 and checklist v0.2. Review and testing not started.' },
+    { t: 'Release', s: 'todo', i: 'Checked data, report, tools', d: 'Release gates; version and change note', o: 'Free releases, each with a DOI', e: 'A pilot dataset may come first, labeled as developmental with independent coding pending.' }
+  ];
+  var L = { done: 'Done', prog: 'In progress', todo: 'Not started' };
+  var pipe = $('pipe'), pdrill = $('pipe-drill'), pbtn = [];
+  S.forEach(function (s, i) {
+    var sp = document.createElement('span'); sp.style.background = 'var(--' + s.s + ')'; $('progress').appendChild(sp);
+    var b = document.createElement('button'); b.className = 'stage';
+    b.innerHTML = '<span class="n">STAGE ' + (i + 1) + '</span><b>' + s.t + '</b><span class="st ' + s.s + '">' + L[s.s] + '</span>';
+    b.addEventListener('click', function () {
+      pbtn.forEach(function (x) { x.classList.remove('sel'); }); b.classList.add('sel');
+      pdrill.innerHTML = '<h3>Stage ' + (i + 1) + ': ' + s.t + ' <span class="st ' + s.s + '" style="margin-left:6px">' + L[s.s] + '</span></h3>' +
+        '<div class="iodo"><div class="io"><span class="k">In</span>' + s.i + '</div><span class="ar">→</span><div class="io mid"><span class="k">Do</span>' + s.d + '</div><span class="ar">→</span><div class="io"><span class="k">Out</span>' + s.o + '</div></div><p class="small">' + s.e + '</p>';
+    });
+    pbtn.push(b); pipe.appendChild(b);
+  });
+  pbtn[1].click();
+
+  // ---------- Coverage and gap ----------
+  var cols = ['Free case-level data', 'Follows to next assessment', 'Acquisition rules', 'Newly public rules', 'Practical steps', 'Data on outcomes'];
+  // values in column order above: Y yes, P partly, N no, U not documented
+  var R = [
+    ['SEC staff ICFR FAQ, Question 3', 'Regulator', 'https://www.sec.gov/oca/controlfaq', 'NNYNNN', 'Sets the acquisition exclusion and its one-year, one-report limits.', 'No data on what companies do; nothing on newly public companies.'],
+    ['SEC Financial Reporting Manual, Topic 4', 'Regulator', 'https://www.sec.gov/about/divisions-offices/division-corporation-finance/financial-reporting-manual/frm-topic-4', 'NNYYNN', 'Covers both the acquisition exclusion (4310.11) and the newly public transition (4310.6).', 'Rules only; no data.'],
+    ['PCAOB AS 2201, B14–B16', 'Audit standard', 'https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201', 'NNYNPN', 'How the auditor handles an excluded acquisition.', 'Auditor side only; no data.'],
+    ['SEC Institute (PLI) blog, Aug. 2024', 'Practitioner explainer', 'https://seciblog.pli.edu/?p=7507', 'NNYNPN', 'Explains the acquisition rules with one filing example.', 'No figures on how often companies exclude, or what follows.'],
+    ['Deloitte: internal controls in M&A', 'Firm article', 'https://www.deloitte.com/us/en/services/audit/articles/internal-controls-mergers-acquisitions.html', 'NNPNPN', 'General advice on controls in due diligence and integration.', 'No steps tied to the one-year limit; no filing data.'],
+    ['Deloitte adviser on new public companies, May 2022', 'Firm advice, reported', 'https://tax.thomsonreuters.com/news/deloittes-controls-expert-shares-tips-on-sarbanes-oxley-for-new-public-companies/', 'NNNYYP', 'Readiness milestones for new public companies; one aggregate figure.', 'No company cases; nothing on acquisitions.'],
+    ['KPMG IPO material weakness study, June 2025', 'Firm study', 'https://kpmg.com/us/en/articles/2025/2024-ipo-material-weakness-study.html', 'NPNPPY', 'Aggregate weakness rates for 2023 IPOs and 2021–2023.', 'Totals only; traditional IPOs only; nothing on acquisitions.'],
+    ['Audit Analytics: weaknesses after an IPO, Sept. 2020', 'Data vendor study', 'https://blog.auditanalytics.com/internal-control-weaknesses-following-an-ipo/', 'NYNYNY', 'Follows IPO companies to their first management report, 2010–2018.', 'Underlying data sold by subscription; nothing on acquisitions.'],
+    ['Audit Analytics Internal Controls database', 'Commercial database', 'https://auditanalytics.help.ideagen.com/hc/en-gb/articles/24096881942674-Understanding-the-Internal-Controls-database', 'NYUUNY', 'Every ICFR report since 2004, by year.', 'Subscription only. No exclusion or transition field documented on its help page (full dictionary not yet checked).'],
+    ['Kravet, McVay & Weber, 2018', 'Academic', 'https://ideas.repec.org/a/spr/reaccs/v23y2018i4d10.1007_s11142-018-9468-9.html', 'NPYNNY', 'Which companies use the acquisition exemption, and later performance.', 'Aggregate; case lists not found to be published.'],
+    ['Huang et al., 2016', 'Academic', 'https://facultyprofile.csuohio.edu/en/publications/ipo-firms-voluntary-compliance-with-sox-404-as-evidence-on-the-va-7/', 'NNNPNY', 'Voluntary SOX 404 compliance at IPO.', 'Aggregate; nothing on acquisitions or the first assessment.']
+  ];
+  var WORD = { Y: 'Yes', P: 'Partly', N: 'No', U: 'n/d', S: 'Planned' };
+  var rule = 'strict', NS = 'http://www.w3.org/2000/svg';
+  function counts(i) { var y = 0, p = 0; R.forEach(function (r) { var v = r[3][i]; if (v === 'Y') y++; if (v === 'P') p++; }); return { y: y, p: p }; }
+  function renderGap() {
+    $('rule-strict').setAttribute('aria-pressed', rule === 'strict'); $('rule-loose').setAttribute('aria-pressed', rule === 'loose');
+    var total = R.length * cols.length, cov = 0, h = '';
+    cols.forEach(function (c, i) {
+      var k = counts(i), n = rule === 'strict' ? k.y : k.y + k.p; cov += n;
+      var pct = Math.round(n / R.length * 100);
+      h += '<div class="barrow' + (n === 0 ? ' zero' : '') + '"><span class="bl">' + c + '</span><div class="track" role="img" aria-label="' + c + ': ' + n + ' of ' + R.length + ' sources">' +
+        '<span style="width:' + (k.y / R.length * 100) + '%;background:var(--yes)"></span>' + (rule === 'loose' ? '<span style="width:' + (k.p / R.length * 100) + '%;background:var(--part)"></span>' : '') +
+        '</div><span class="pct">' + pct + '%</span></div>';
+    });
+    $('bars').innerHTML = h;
+    var gapPct = (total - cov) / total * 100;
+    $('gap-pct').textContent = gapPct.toFixed(0) + '%';
+    $('gap-cap').textContent = 'of the 66 source-and-point checks show no ' + (rule === 'strict' ? 'full ' : '') + 'coverage (' + (total - cov) + ' of 66)';
+    $('core-line').innerHTML = '<b style="color:var(--gap)">Core gap: 0 of 11 sources (0%)</b> provide free, case-level data, and none combines it with following companies to the next assessment. The two sources that follow companies cover newly public companies only, and their data is sold.';
+    var g = $('gauge'); g.innerHTML = '';
+    var r = 80, c = 2 * Math.PI * r;
+    [['var(--no)', 1], ['var(--gap)', gapPct / 100]].forEach(function (a, j) {
+      var ci = document.createElementNS(NS, 'circle'); ci.setAttribute('cx', 100); ci.setAttribute('cy', 100); ci.setAttribute('r', r);
+      ci.setAttribute('fill', 'none'); ci.setAttribute('stroke', a[0]); ci.setAttribute('stroke-width', 26);
+      if (j) { ci.setAttribute('stroke-dasharray', (c * a[1]) + ' ' + c); ci.setAttribute('transform', 'rotate(-90 100 100)'); }
+      g.appendChild(ci);
+    });
+    var t = document.createElementNS(NS, 'text'); t.setAttribute('x', 100); t.setAttribute('y', 96); t.setAttribute('text-anchor', 'middle'); t.setAttribute('fill', 'var(--muted)'); t.setAttribute('style', 'font: 600 13px system-ui'); t.textContent = 'not covered'; g.appendChild(t);
+    var t2 = document.createElementNS(NS, 'text'); t2.setAttribute('x', 100); t2.setAttribute('y', 116); t2.setAttribute('text-anchor', 'middle'); t2.setAttribute('fill', 'var(--muted)'); t2.setAttribute('style', 'font: 12px system-ui'); t2.textContent = (rule === 'strict' ? 'full coverage only' : 'partial counted'); g.appendChild(t2);
+  }
+  $('rule-strict').addEventListener('click', function () { rule = 'strict'; renderGap(); });
+  $('rule-loose').addEventListener('click', function () { rule = 'loose'; renderGap(); });
+  renderGap();
+  var th = '<thead><tr><th>Source</th>' + cols.map(function (c, i) { return '<th' + (i < 2 ? ' class="gapcol"' : '') + '>' + c + '</th>'; }).join('') + '</tr></thead><tbody>';
+  R.forEach(function (r, i) {
+    th += '<tr class="srow" tabindex="0" data-i="' + i + '"><td class="s">' + esc(r[0]) + '<br><span class="tag">' + r[1] + '</span></td>' + r[3].split('').map(function (v) { return '<td class="' + v + '">' + WORD[v] + '</td>'; }).join('') + '</tr>';
+  });
+  th += '<tr><td class="s"><b style="color:var(--accent)">ICFR Transitions study</b><br><span class="tag">Planned, protocol v1.4</span></td>' + cols.map(function () { return '<td class="S">Planned</td>'; }).join('') + '</tr></tbody>';
+  $('heat').innerHTML = th;
+  function pickSrc(i) {
+    var r = R[i];
+    [].forEach.call(document.querySelectorAll('.srow'), function (x) { x.classList.toggle('sel', +x.dataset.i === i); });
+    $('src-drill').innerHTML = '<h3>' + esc(r[0]) + '</h3><p><b>Covers:</b> ' + r[4] + '</p><p><b>Lacks for this study:</b> ' + r[5] + '</p><p class="src"><a href="' + r[2] + '">Open the source</a></p>';
+  }
+  [].forEach.call(document.querySelectorAll('.srow'), function (x) {
+    x.addEventListener('click', function () { pickSrc(+x.dataset.i); });
+    x.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pickSrc(+x.dataset.i); } });
+  });
+  pickSrc(7);
+
+  // ---------- Timeline ----------
+  var TL = [
+    ['2007', 'ex', 'SEC staff ICFR FAQ revised; PCAOB standard for ICFR audits (now AS 2201)', 'The rules for excluding an acquired business are set, for management and for auditors.'],
+    ['2016', 'ex', 'Huang et al.', 'Voluntary SOX 404 compliance at IPO, studied in aggregate.'],
+    ['2018', 'ex', 'Kravet, McVay & Weber', 'Which companies use the acquisition exemption, and how they perform afterward, in aggregate.'],
+    ['Sept 2020', 'ex', 'Audit Analytics', 'Follows IPO companies to their first management report; data sold by subscription.'],
+    ['May 2022', 'ex', 'Deloitte adviser on new public companies', 'General readiness advice, reported by Thomson Reuters.'],
+    ['Aug 2024', 'ex', 'SEC Institute (PLI) blog', 'Explains the acquisition rules with one filing example.'],
+    ['June 2025', 'ex', 'KPMG IPO material weakness study', '2023 IPOs, aggregate figures only.'],
+    ['Oct 27–28, 2026', 'pr', 'Study defined; Pilot A screened', '33 candidate filings screened by hand; 12 company-events verified; screening rules written.', 'done'],
+    ['Oct 31, 2026', 'pr', 'Protocol v1.4 written; this site live; research moved here from the practice website', 'Today.', 'done', 'today'],
+    ['Next', 'pr', 'Register the protocol on OSF', 'A public, dated record of the plan before the main analysis.', 'prog'],
+    ['After registration', 'pr', 'Search validation, then the 2025 screen and the fixed sample', '30 per transition, chosen at random, no substitution.', 'prog'],
+    ['Dec 31, 2026', 'pr', 'Observation cutoff', 'Last date for follow-up filings in this release.', 'todo'],
+    ['By June 30, 2027', 'pr', 'Target to finish coding and quality checks', 'Second coder, exclusion audit and analysis.', 'todo'],
+    ['Then', 'pr', 'Release data, report and reviewed guidance', 'Each release with a DOI, after the release gates are met.', 'todo']
+  ];
+  var DOT = { ex: 'var(--no-ink)', done: 'var(--done)', prog: 'var(--prog)', todo: 'var(--todo)' };
+  var tlf = 'all';
+  function renderTL() {
+    $('tl').innerHTML = TL.filter(function (x) { return tlf === 'all' || x[1] === tlf; }).map(function (x, i) {
+      var c = x[1] === 'ex' ? DOT.ex : DOT[x[4]];
+      return '<li><button class="ti' + (x[5] ? ' today' : '') + '" aria-expanded="false"><span class="d">' + x[0] + '</span><span class="rail"><i style="background:' + c + '"></i></span><span class="body"><span class="lane ' + x[1] + '">' + (x[1] === 'ex' ? 'Existing' : 'This study') + '</span><b>' + esc(x[2]) + '</b><span class="more">' + x[3] + '</span></span></button></li>';
+    }).join('');
+    [].forEach.call(document.querySelectorAll('.ti'), function (b) { b.addEventListener('click', function () { b.setAttribute('aria-expanded', b.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); }); });
+  }
+  [].forEach.call(document.querySelectorAll('.chip-btn'), function (b) {
+    b.addEventListener('click', function () { tlf = b.dataset.f; [].forEach.call(document.querySelectorAll('.chip-btn'), function (x) { x.setAttribute('aria-pressed', x === b); }); renderTL(); });
+  });
+  renderTL();
+
+  // ---------- Further work ----------
+  var X = [
+    ['Close the review gaps', 'Before first release', 'Check the Audit Analytics data dictionary, the Big 4 ICFR handbooks, AICPA and Center for Audit Quality publications, and post-2018 papers on SSRN and Google Scholar. If any source holds case-level exclusion data, the gap statement is narrowed accordingly.'],
+    ['Keep the record running after 2025', 'Ongoing stream, outside the confirmatory sample', 'The weekly search keeps finding new cases. Later years can be coded under the same rules and released as separate, labeled updates, so trends can be seen without mixing them into the registered results.'],
+    ['Measure search coverage for other listing routes', 'Stated limit of v1.4', 'The validation set covers traditional IPOs only. A separate check for spin-offs on Form 10, direct listings and SPAC mergers would show how well the searches find those companies.'],
+    ['Compare with and without an auditor\'s ICFR opinion', 'Descriptive only in v1.4', 'The current plan reports these groups side by side. A study designed for comparison, with a larger sample, could test whether patterns differ.'],
+    ['Link cases to later outcomes', 'Not in v1.4', 'Earlier studies linked exemption use or ineffective first reports to later restatements, late filings or impairments, in aggregate. Case records make the same link checkable company by company.'],
+    ['Larger samples for remediation timing', 'Not in v1.4', 'Thirty cases per transition gives case histories, not precise rates. Pooling releases over several years would allow firmer estimates of how long disclosed remediation takes.'],
+    ['Test the tools in real use', 'After usability testing', 'Beyond the planned usability test, documented use of a tool in an actual integration or first assessment, with a dated, consented statement, would show whether it helps in practice.'],
+    ['Open the data for others to extend', 'With each release', 'Each release carries a DOI and an open licence. Other researchers can recode a sample, add variables or apply the method to other control transitions.']
+  ];
+  $('ext').innerHTML = X.map(function (x) { return '<button class="ext" aria-expanded="false"><span class="row"><b>' + esc(x[0]) + '</b><span class="plus" aria-hidden="true">+</span></span><span class="tag" style="justify-self:start">' + x[1] + '</span><span class="more">' + x[2] + '</span></button>'; }).join('');
+  [].forEach.call(document.querySelectorAll('.ext'), function (b) { b.addEventListener('click', function () { b.setAttribute('aria-expanded', b.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); }); });
+})();
+</script>
+</body>
+</html>
