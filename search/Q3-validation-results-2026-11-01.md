@@ -2,7 +2,7 @@
 
 ICFR Transitions Study. Registered protocol v1.4: https://osf.io/jnpr2 (DOI 10.17605/OSF.IO/JNPR2). Query set, screen and sampling rules: [Q3-frozen-2026-11-01.md](Q3-frozen-2026-11-01.md), committed before either sample was drawn.
 
-**Status:** run on November 1, 2026, by the investigator with AI assistance (scripted EDGAR retrieval, automated screen and first-pass reading). Every decision is first-pass and pending the investigator's verification against the filings. Nothing here is a confirmatory result.
+**Status:** run on November 1, 2026, by the investigator with AI assistance (scripted EDGAR retrieval, automated screen and first-pass reading). On November 1, 2026, the investigator checked all 32 eligible positives against the filings: 32 confirmed, 0 rejected. Decisions on non-positive filings are first-pass. Nothing here is a confirmatory result.
 
 ## Result
 
@@ -11,7 +11,7 @@ ICFR Transitions Study. Registered protocol v1.4: https://osf.io/jnpr2 (DOI 10.1
 | AQ | 15 | 14 | **93%** | 80% (12 of 15) | Pass |
 | NP | 17 | 17 | **100%** | 80% | Pass |
 
-Q3 meets the protocol section 4 threshold in both cohorts, so it is the query version for the main screen, subject to the investigator's verification below.
+Q3 meets the protocol section 4 threshold in both cohorts and is the frozen query version for the main 2025 screen.
 
 For comparison, Q2 (not used for the main screen) returned all 17 NP positives in this sample. It found 7 of 15 AQ positives in the first sample ([results](AQ-validation-results-2026-11-01.md)).
 
@@ -285,9 +285,9 @@ Totals: 15 P, 32 N, 21 O, 7 W, 110 X.
 
 **Flag (case 70, Heritage Distilling).** Item 9A gives no management report and no transition statement. Because there is no transition statement, it is recorded as not an eligible positive under the definition. If the investigator counts it as a positive, NP recall is 17 of 18 (94%), still above the threshold. Under the codebook, this filing is coded "not disclosed".
 
-## Open items for the investigator
+## Investigator decisions (November 1, 2026)
 
-1. Verify the 15 AQ positives and 17 NP positives from the filings.
-2. Decide case 70 (Heritage Distilling).
-3. Decide whether to propose adding "except" to the exclusion terms in a later version. Any such version would need its own validation.
-4. After verification, Q3 is the frozen query version for the main 2025 screen.
+1. All 32 eligible positives (15 AQ, 17 NP) were verified against the filings and confirmed.
+2. Case 70 (Heritage Distilling) is not an eligible positive, as recorded above.
+3. "Except" is not added. Q3 stays as frozen.
+4. Q3 is the frozen query version for the main 2025 screen. A dated update to the OSF registration was filed on November 1, 2026.
