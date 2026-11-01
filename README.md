@@ -9,7 +9,8 @@ The project builds case-level records from public SEC filings, each linked to it
 
 ## Status (October 31, 2026)
 
-- Research protocol v1.4: registered on OSF on October 31, 2026, https://osf.io/jnpr2
+- Research protocol v1.4: registered on OSF on October 31, 2026, https://osf.io/jnpr2 (DOI 10.17605/OSF.IO/JNPR2).
+- Search query set Q2 and validation sampling rules: frozen November 1, 2026, before search validation (search/Q2-frozen-2026-11-01.md).
 - Pilot: 10-K filings dated March 3–6, 2025, used to develop and test the screening rules and reported separately.
 - Main sample: 10-K filings dated in 2025. Not started.
 - Guidance: research brief v1.1 and evidence checklist draft v0.2, awaiting independent review.
