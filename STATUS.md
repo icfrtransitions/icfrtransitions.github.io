@@ -16,6 +16,10 @@
 | Second-coder subset (10 per cohort) | Nov 2, 2026 | [search/second-coder-subset-2026-11-02.md](search/second-coder-subset-2026-11-02.md) |
 | Corrections, clarifications and deviations | Nov 3, 2026 | [search/corrections-and-deviations-2026-11-03.md](search/corrections-and-deviations-2026-11-03.md) |
 | Machine-readable lists and reproduction script | Nov 3, 2026 | [data/](data/), [tools/](tools/) |
+| Exclusion-audit frames published (open item O2 resolved) | Nov 3, 2026 | [data/exclusion-audit-frame-AQ-2026-11-01.csv](data/exclusion-audit-frame-AQ-2026-11-01.csv), [data/exclusion-audit-frame-NP-2026-11-01.csv](data/exclusion-audit-frame-NP-2026-11-01.csv) |
+| By-hand audit (D2): seed, then draw of 60 per cohort | Nov 3, 2026 | [search/by-hand-audit-seed-2026-11-03.md](search/by-hand-audit-seed-2026-11-03.md), [search/by-hand-audit-draw-2026-11-03.md](search/by-hand-audit-draw-2026-11-03.md) |
+| Screen S2 frozen (D1), before running on the 2025 frame | Nov 3, 2026 | [search/S2-frozen-2026-11-03.md](search/S2-frozen-2026-11-03.md) |
+| Follow-up OSF update (C2, D1, D2) submitted | Nov 3, 2026 | OSF registration |
 
 ## In progress
 
@@ -23,10 +27,9 @@
 
 ## Not started or pending
 
-- **Screen S2 and re-screen** of the X3 exclusions (deviation D1). The fixed sample is kept, and additions are reported separately.
-- **By-hand exclusion audit** by the investigator: a seeded draw of 60 per cohort, an amendment to section 7 (deviation D2).
-- **Follow-up OSF update** reporting C2 (validation verification completed) and deviations D1–D2.
-- **Export of the validation and audit records** (open items O1 and O2).
+- **S2 re-screen** of the X3 exclusions (deviation D1): rule frozen, not yet run. The fixed sample is kept, and additions are reported separately.
+- **By-hand exclusion audit** by the investigator: draw published, reading not started (deviation D2).
+- **Export of the validation records** (open item O1).
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
 - **Dataset, report and permanent DOI release:** not started.
