@@ -21,7 +21,7 @@
 | Screen S2 frozen (D1), before running on the 2025 frame | Nov 3, 2026 | [search/S2-frozen-2026-11-03.md](search/S2-frozen-2026-11-03.md) |
 | Screen S2 run on 4,856 X3 exclusions: 55 AQ and 2 NP pass the screen | Nov 3, 2026 | [search/S2-results-2026-11-03.md](search/S2-results-2026-11-03.md) |
 | S2 eligibility decisions: 26 new eligible AQ issuer-events, 0 new NP (fixed sample unchanged) | Nov 3, 2026 | [search/S2-eligibility-2026-11-03.md](search/S2-eligibility-2026-11-03.md) |
-| Follow-up OSF update (C2, D1, D2) submitted | Nov 3, 2026 | OSF registration |
+| Interpretation I1 (adopted after review) checked against earlier decisions: no changes | Nov 3, 2026 | [search/I1-retrospective-check-2026-11-03.md](search/I1-retrospective-check-2026-11-03.md) |
 
 ## In progress
 
@@ -29,6 +29,7 @@
 
 ## Not started or pending
 
+- **Follow-up OSF update** (C2, D1, D2): the investigator reports submitting it on Nov 3, 2026. As of Nov 3, 2026, 21:08 UTC, OSF's public record shows no new update (it may be awaiting approval). It predates the S2 results, the S2 eligibility decisions and I1, so a further update will report those.
 - **S2 additions** (deviation D1): description of the 26 AQ additions and comparison with the sample; per-filing S2 results for all 4,856 filings to be exported to data/.
 - **By-hand exclusion audit** by the investigator: draw published, reading not started (deviation D2).
 - **Export of the validation records** (open item O1).
