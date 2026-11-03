@@ -20,6 +20,7 @@
 | By-hand audit (D2): seed, then draw of 60 per cohort | Nov 3, 2026 | [search/by-hand-audit-seed-2026-11-03.md](search/by-hand-audit-seed-2026-11-03.md), [search/by-hand-audit-draw-2026-11-03.md](search/by-hand-audit-draw-2026-11-03.md) |
 | Screen S2 frozen (D1), before running on the 2025 frame | Nov 3, 2026 | [search/S2-frozen-2026-11-03.md](search/S2-frozen-2026-11-03.md) |
 | Screen S2 run on 4,856 X3 exclusions: 55 AQ and 2 NP pass the screen | Nov 3, 2026 | [search/S2-results-2026-11-03.md](search/S2-results-2026-11-03.md) |
+| S2 eligibility decisions: 26 new eligible AQ issuer-events, 0 new NP (fixed sample unchanged) | Nov 3, 2026 | [search/S2-eligibility-2026-11-03.md](search/S2-eligibility-2026-11-03.md) |
 | Follow-up OSF update (C2, D1, D2) submitted | Nov 3, 2026 | OSF registration |
 
 ## In progress
@@ -28,7 +29,7 @@
 
 ## Not started or pending
 
-- **Eligibility review of the 57 S2 passes** (deviation D1): not started. The fixed sample is kept, and eligible additions are reported separately. Per-filing S2 results for all 4,856 filings to be exported to data/.
+- **S2 additions** (deviation D1): description of the 26 AQ additions and comparison with the sample; per-filing S2 results for all 4,856 filings to be exported to data/.
 - **By-hand exclusion audit** by the investigator: draw published, reading not started (deviation D2).
 - **Export of the validation records** (open item O1).
 - **Second coder:** not recruited.
