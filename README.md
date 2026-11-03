@@ -9,6 +9,8 @@ The project builds case-level records from public SEC filings, each linked to it
 
 ## Status (November 2, 2026)
 
+The current status ledger is [STATUS.md](STATUS.md). Corrections and protocol deviations found on November 3, 2026 are in [search/corrections-and-deviations-2026-11-03.md](search/corrections-and-deviations-2026-11-03.md).
+
 - Research protocol v1.4: registered on OSF on October 31, 2026, https://osf.io/jnpr2 (DOI 10.17605/OSF.IO/JNPR2).
 - Search query set Q2 and validation sampling rules: frozen November 1, 2026, before search validation (search/Q2-frozen-2026-11-01.md).
 - Pilot: 10-K filings dated March 3–6, 2025, used to develop and test the screening rules and reported separately.
