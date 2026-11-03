@@ -163,7 +163,7 @@
 <body>
 <main>
 <nav class="site"><a href="index.html">Home</a><a href="research.html">Research program</a><a href="acquisition-exclusion.html">Brief</a><a href="checklist.html">Checklist</a><a href="explore.html" aria-current="page">Explore</a></nav>
-<p class="kicker">Interactive map &middot; status October 31, 2026</p>
+<p class="kicker">Interactive map &middot; status November 2, 2026</p>
 <h1>Explore the ICFR Transitions study</h1>
 <p class="lead">The problem, the two transitions, how the study runs, what existing work already covers, how large the gap is, where the work stands, and how it could be taken further. Select any box to see more.</p>
 
@@ -199,6 +199,7 @@
     <div class="col ours"><h3><span class="dot" style="background:var(--accent)"></span>This study, today</h3><ul>
       <li>Protocol v1.4 registered on OSF on October 31, 2026 (<a href="https://osf.io/jnpr2">osf.io/jnpr2</a>).</li>
       <li>Pilot: 33 candidate filings screened; 12 company-events verified.</li>
+      <li>Search validated and 2025 screen run, November 1, 2026; fixed sample of 30 per transition published November 2, 2026, before coding.</li>
       <li>Draft brief v1.1 and draft checklist v0.2 published for comment.</li>
       <li><b>No findings published yet.</b> The open questions are answered only when the main sample is coded, checked and released.</li></ul></div>
   </div>
@@ -346,11 +347,11 @@
   // ---------- Pipeline ----------
   var S = [
     { t: 'Set up and register', s: 'done', i: 'Questions, rules, public identity', d: 'Write the protocol; publish the site; register on OSF', o: 'Public, dated plan', e: 'Protocol v1.4 registered on OSF on October 31, 2026 (osf.io/jnpr2); project site and ORCID record live.' },
-    { t: 'Find candidate filings', s: 'prog', i: '10-K filings on EDGAR', d: 'Fixed full-text searches and a written screen', o: 'Candidates with reasons', e: 'Pilot A: 33 candidate rows from filings of March 3–5, 2025. Pilot B: 15 rows screened from March 6, 2025. Search validation on a fresh sample comes before the 2025 screen.' },
-    { t: 'Select the fixed sample', s: 'todo', i: 'Eligible candidates', d: 'Random order; first 30 eligible per transition; no substitution', o: 'Published sample list', e: 'Starts after registration and search validation.' },
-    { t: 'Code and verify', s: 'todo', i: 'Item 9A, auditor report, notes', d: 'Three linked records per case, each value tied to its filing', o: 'Verified case records', e: 'Pilot: 12 verified company-events (3 newly public, 9 acquisition, about 30 acquired businesses). Main-sample coding not started.' },
+    { t: 'Find candidate filings', s: 'done', i: '10-K filings on EDGAR', d: 'Fixed full-text searches and a written screen', o: 'Candidates with reasons', e: 'Search validated November 1, 2026: query set Q3 found 93% of acquisition and 100% of newly public cases in fresh samples (the first version, Q2, found 47% and is published). The 2025 screen covered 6,656 filings: 329 acquisition and 118 newly public candidates. Exclusion audit: 1 wrongful exclusion in 541 and 1 in 652.' },
+    { t: 'Select the fixed sample', s: 'done', i: 'Eligible candidates', d: 'Random order; first 30 eligible per transition; no substitution', o: 'Published sample list', e: 'Published November 2, 2026, before coding: 30 per transition from the first 43 candidates in each list, with every candidate passed over and the reason.' },
+    { t: 'Code and verify', s: 'prog', i: 'Item 9A, auditor report, notes', d: 'Three linked records per case, each value tied to its filing', o: 'Verified case records', e: 'Pilot: 12 verified company-events (3 newly public, 9 acquisition, about 30 acquired businesses). Main-sample coding started November 2, 2026.' },
     { t: 'Follow to next report', s: 'todo', i: 'Next 10-K by Dec 31, 2026', d: 'Inclusion status, first assessment, remediation', o: 'Complete case histories', e: 'Observation cutoff December 31, 2026.' },
-    { t: 'Quality checks', s: 'todo', i: 'Coded sample; excluded filings', d: 'Independent second coder; quarterly exclusion audit', o: 'Agreement rates; audit results', e: 'Second coder and reviewers not yet recruited.' },
+    { t: 'Quality checks', s: 'prog', i: 'Coded sample; excluded filings', d: 'Independent second coder; quarterly exclusion audit', o: 'Agreement rates; audit results', e: 'First exclusion audit done November 1, 2026. Second-coder subset drawn (10 per transition); second coder and reviewers not yet recruited.' },
     { t: 'Analyze', s: 'todo', i: 'Verified records', d: 'Five research questions, descriptive only', o: 'Counts, patterns, case histories', e: 'No findings published yet. Target completion June 30, 2027.' },
     { t: 'Build and test guidance', s: 'prog', i: 'Rules and observed patterns', d: 'Draft tools; written technical review; usability test with 3+ practitioners', o: 'Reviewed, tested tools', e: 'Public drafts: brief v1.1 and checklist v0.2. Review and testing not started.' },
     { t: 'Release', s: 'todo', i: 'Checked data, report, tools', d: 'Release gates; version and change note', o: 'Free releases, each with a DOI', e: 'A pilot dataset may come first, labeled as developmental with independent coding pending.' }
@@ -446,8 +447,9 @@
     ['June 2025', 'ex', 'KPMG IPO material weakness study', '2023 IPOs, aggregate figures only.'],
     ['Oct 27–28, 2026', 'pr', 'Study defined; Pilot A screened', '33 candidate filings screened by hand; 12 company-events verified; screening rules written.', 'done'],
     ['Oct 31, 2026', 'pr', 'Protocol v1.4 written; this site live; research moved here from the practice website', 'Research moved to its independent, non-commercial home.', 'done'],
-    ['Oct 31, 2026', 'pr', 'Protocol registered on OSF', 'A public, dated record of the plan before the main analysis: osf.io/jnpr2.', 'done', 'today'],
-    ['Next', 'pr', 'Search validation, then the 2025 screen and the fixed sample', '30 per transition, chosen at random, no substitution.', 'prog'],
+    ['Oct 31, 2026', 'pr', 'Protocol registered on OSF', 'A public, dated record of the plan before the main analysis: osf.io/jnpr2.', 'done'],
+    ['Nov 1, 2026', 'pr', 'Search validated; 2025 screen run', 'Query set Q3 passed the 80% recall threshold for both transitions; candidate lists and an exclusion audit published.', 'done'],
+    ['Nov 2, 2026', 'pr', 'Fixed sample published; coding begins', '30 per transition, chosen at random, no substitution.', 'done', 'today'],
     ['Dec 31, 2026', 'pr', 'Observation cutoff', 'Last date for follow-up filings in this release.', 'todo'],
     ['By June 30, 2027', 'pr', 'Target to finish coding and quality checks', 'Second coder, exclusion audit and analysis.', 'todo'],
     ['Then', 'pr', 'Release data, report and reviewed guidance', 'Each release with a DOI, after the release gates are met.', 'todo']
