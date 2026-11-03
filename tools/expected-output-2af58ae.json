@@ -1,0 +1,56 @@
+{
+ "AQ": {
+  "candidateRows": 329,
+  "unique": 329,
+  "maxRank": 329,
+  "orderReproduced": true,
+  "mismatchedPositions": [],
+  "candidateOrderSHA256": "0804c806d9f96aaec3137a16d042b9a40453dee405182d8b5c3244802e0fb5dc",
+  "sampleRowsRead": 43,
+  "eligible": 30,
+  "notEligible": 13,
+  "sampleRanksMatchCandidateList": true,
+  "eligibleSHA256": "712f15b26f699ea9f48240007909375ee77a1c9bdf9ef1ac65222c1acc3ec62c",
+  "subsetReproduced": true,
+  "subsetSHA256": "1fe6f1923467d55a18ae06c65b5b7ff820da89440d2c3a2dd6825f8f0d67736f",
+  "subsetSampleRanks": [
+   3,
+   19,
+   8,
+   20,
+   33,
+   31,
+   15,
+   43,
+   30,
+   14
+  ]
+ },
+ "NP": {
+  "candidateRows": 118,
+  "unique": 118,
+  "maxRank": 118,
+  "orderReproduced": true,
+  "mismatchedPositions": [],
+  "candidateOrderSHA256": "a80d4964874c0e6428a4a7eb8d7c8358dce048aef8a101b463dd28f042765840",
+  "sampleRowsRead": 43,
+  "eligible": 30,
+  "notEligible": 13,
+  "sampleRanksMatchCandidateList": true,
+  "eligibleSHA256": "87c698ee8465edaadbb3fd645cee08c8184c19414097373c26315664b4b33649",
+  "subsetReproduced": true,
+  "subsetSHA256": "56e7675b3c16febebd2e7b607fd79e7f87b3d98196983e191d4347bd54b7d845",
+  "subsetSampleRanks": [
+   19,
+   39,
+   11,
+   13,
+   16,
+   17,
+   5,
+   38,
+   10,
+   14
+  ]
+ }
+}
