@@ -22,6 +22,7 @@
 | Screen S2 run on 4,856 X3 exclusions: 55 AQ and 2 NP pass the screen | Nov 3, 2026 | [search/S2-results-2026-11-03.md](search/S2-results-2026-11-03.md) |
 | S2 eligibility decisions: 26 new eligible AQ issuer-events, 0 new NP (fixed sample unchanged) | Nov 3, 2026 | [search/S2-eligibility-2026-11-03.md](search/S2-eligibility-2026-11-03.md) |
 | Interpretation I1 (adopted after review) checked against earlier decisions: no changes | Nov 3, 2026 | [search/I1-retrospective-check-2026-11-03.md](search/I1-retrospective-check-2026-11-03.md) |
+| Re-checks: Q3 validation negatives (no I1 changes); first audit re-checked one by one (1 new AQ statement, Arcadium Lithium, eligibility pending; 22 draw filings deferred) | Nov 3, 2026 | [search/rechecks-validation-and-first-audit-2026-11-03.md](search/rechecks-validation-and-first-audit-2026-11-03.md) |
 
 ## In progress
 
@@ -32,7 +33,8 @@
 - **Follow-up OSF update** (C2, D1, D2): the investigator reports submitting it on Nov 3, 2026. As of Nov 3, 2026, 21:08 UTC, OSF's public record shows no new update (it may be awaiting approval). It predates the S2 results, the S2 eligibility decisions and I1, so a further update will report those.
 - **S2 additions** (deviation D1): description of the 26 AQ additions and comparison with the sample; per-filing S2 results for all 4,856 filings to be exported to data/.
 - **By-hand exclusion audit** by the investigator: draw published, reading not started (deviation D2).
-- **Export of the validation records** (open item O1).
+- **Arcadium Lithium** (first-audit re-check): eligibility decision, and whether it triggers a further rule revision under section 7.
+- **Export of the validation records** (open item O1): the records are recoverable from the automation's run logs; row-level export not yet published.
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
 - **Dataset, report and permanent DOI release:** not started.
