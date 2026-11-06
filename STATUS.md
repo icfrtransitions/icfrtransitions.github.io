@@ -1,6 +1,6 @@
 # Project status
 
-**As of November 3, 2026.** This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
+**As of November 6, 2026.** This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
 
 ## Done (public record)
 
@@ -25,6 +25,7 @@
 | Re-checks: Q3 validation negatives (no I1 changes); first audit re-checked one by one (1 new AQ statement, Arcadium Lithium, eligibility pending; 22 draw filings deferred) | Nov 3, 2026 | [search/rechecks-validation-and-first-audit-2026-11-03.md](search/rechecks-validation-and-first-audit-2026-11-03.md) |
 | Arcadium Lithium eligible (second wrongful exclusion in the first audit, 2 of 541); screen S3 frozen (section 7) | Nov 4, 2026 | [search/S3-frozen-2026-11-04.md](search/S3-frozen-2026-11-04.md) |
 | S3 run on 4,442 AQ filings: 505 pass, 4 new eligible after triage and investigator decisions; AQ additions now 31 (fixed sample unchanged) | Nov 4, 2026 | [search/S3-results-2026-11-04.md](search/S3-results-2026-11-04.md) |
+| By-hand audit (D2) read by the investigator: 0 of 60 AQ and 0 of 60 NP wrongful exclusions (95% upper bound 5.96% each); 21 deferred first-audit filings checked (no statements); re-check NP count corrected to 13 deferred, 639 checked | Nov 6, 2026 | [search/by-hand-audit-results-2026-11-06.md](search/by-hand-audit-results-2026-11-06.md), [data/by-hand-audit-reading-2026-11-06.csv](data/by-hand-audit-reading-2026-11-06.csv) |
 
 ## In progress
 
@@ -32,9 +33,9 @@
 
 ## Not started or pending
 
-- **Follow-up OSF update** (C2, D1, D2): the investigator reports submitting it on Nov 3, 2026. As of Nov 3, 2026, 21:08 UTC, OSF's public record shows no new update (it may be awaiting approval). It predates the S2 results, the S2 eligibility decisions and I1, so a further update will report those.
+- **Follow-up OSF update** (C2, D1, D2): the investigator reports submitting it on Nov 3, 2026. As of Nov 3, 2026, 21:08 UTC, OSF's public record shows no new update (it may be awaiting approval). It predates the S2 results, the S2 eligibility decisions, I1, the Arcadium decision, S3 and the by-hand audit results, so a further update will report those.
 - **Frame additions** (deviation D1): description of the 31 AQ additions (S2, Arcadium, S3) and comparison with the sample; per-filing S2 and S3 results to be exported to data/.
-- **By-hand exclusion audit** by the investigator: draw published, reading not started (deviation D2).
+- **Frame scope question** (from the by-hand audit): whether 10-K/A filings carrying only Part III information, and asset-backed trusts, belong in the screen frame. No effect on any published count.
 - **Export of the validation records** (open item O1): the records are recoverable from the automation's run logs; row-level export not yet published.
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
