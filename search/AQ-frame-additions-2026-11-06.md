@@ -1,6 +1,6 @@
 # AQ frame additions: description and comparison with the sample
 
-ICFR Transitions Study. Registered protocol v1.4: https://osf.io/jnpr2. This is the description that deviation D1 calls for ([corrections-and-deviations-2026-11-03.md](corrections-and-deviations-2026-11-03.md)). Prepared November 6, 2026.
+ICFR Transitions Study. Registered protocol v1.4: https://osf.io/jnpr2. This is the description that deviation D1 calls for ([corrections-and-deviations-2026-11-03.md](corrections-and-deviations-2026-11-03.md)). Prepared November 6, 2026; updated the same day after screen S4 (see the last section).
 
 Row-level file: [data/AQ-frame-additions-2026-11-06.csv](../data/AQ-frame-additions-2026-11-06.csv). SHA-256 of the 31 accession numbers, sorted and joined by "\n": `b0058df071391346bf4e6f58ba23ca23883f138f2f4b8b4451d7f77965ac9ad4`.
 
@@ -60,3 +60,18 @@ The fields come from the 2025 screen table (form, filing date, SIC code, screen 
 - The comparison uses fields that are already recorded; nothing new was read for it.
 - SIC codes are EDGAR's registrant codes and may not reflect the acquired business.
 - The eligibility decisions behind the additions rest on AI-assisted reviews adopted by the investigator, as set out in each decision record.
+
+## Update after screen S4 (November 6, 2026)
+
+Four more eligible AQ issuer-events were added. The row-level file now lists **35**.
+- First National Corp ([S4-frozen-2026-11-06.md](S4-frozen-2026-11-06.md));
+- Penske Automotive Group, Quest Diagnostics and Veralto ([S4-results-2026-11-06.md](S4-results-2026-11-06.md)).
+
+SHA-256 of the 35 accession numbers, sorted and joined by "\n": `1317e8605162f0bdcd2c322a7543f2b9be97e33303e7d30365e2fd877d9fa770`.
+
+All four are original 10-Ks filed February 20 to March 31, 2025. With them:
+- filings in January–March number 27 of 35 (77%);
+- manufacturing is 19 of 35 (54%), against 40% in the sample;
+- services are 5, finance 3 and retail trade 2.
+
+The comparison above, made for 31, is otherwise unchanged in direction. Penske's excluded businesses are recorded as "Rybrook Group Limited and other named 2024 acquisitions"; their count is not entered.
