@@ -31,6 +31,8 @@
 | Q3 AQ validation records published from the run logs (O1, AQ part); First National Corp exclusion found in a row beyond the stopping point (eligibility pending) | Nov 6, 2026 | [search/Q3-validation-records-2026-11-06.md](search/Q3-validation-records-2026-11-06.md), [data/Q3-AQ-validation-records-2026-11-01.csv](data/Q3-AQ-validation-records-2026-11-01.csv) |
 | 31 AQ frame additions described and compared with the sample (D1) | Nov 6, 2026 | [search/AQ-frame-additions-2026-11-06.md](search/AQ-frame-additions-2026-11-06.md), [data/AQ-frame-additions-2026-11-06.csv](data/AQ-frame-additions-2026-11-06.csv) |
 | Clarifications C10 (asset-backed trusts under X2) and C11 (10-K/A not a separate event); no counts change | Nov 6, 2026 | [search/clarifications-C10-C11-2026-11-06.md](search/clarifications-C10-C11-2026-11-06.md) |
+| First National Corp eligible (AQ addition 32); screen S4 frozen (section 7) | Nov 6, 2026 | [search/S4-frozen-2026-11-06.md](search/S4-frozen-2026-11-06.md) |
+| S4 run on 4,442 AQ filings: 21 pass, 3 new eligible (Penske, Quest Diagnostics, Veralto); AQ additions now 35 (fixed sample unchanged) | Nov 6, 2026 | [search/S4-results-2026-11-06.md](search/S4-results-2026-11-06.md) |
 
 ## In progress
 
@@ -38,7 +40,7 @@
 
 ## Not started or pending
 
-- **First National Corp /VA/** (FY2024 10-K, 0001437749-25-010228): exclusion of Touchstone found in the Q3 validation logs; eligibility to be decided by the investigator, with the section 7 question that follows if eligible.
+- **Frame additions file:** add First National and the three S4 additions to the row-level list (currently 31 of 35).
 - **O1, NP part:** records of the 58 NP companies not kept are not in the retrievable run history; open.
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
