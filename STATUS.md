@@ -27,6 +27,10 @@
 | S3 run on 4,442 AQ filings: 505 pass, 4 new eligible after triage and investigator decisions; AQ additions now 31 (fixed sample unchanged) | Nov 4, 2026 | [search/S3-results-2026-11-04.md](search/S3-results-2026-11-04.md) |
 | By-hand audit (D2) read by the investigator: 0 of 60 AQ and 0 of 60 NP wrongful exclusions (95% upper bound 5.96% each); 21 deferred first-audit filings checked (no statements); re-check NP count corrected to 13 deferred, 639 checked | Nov 6, 2026 | [search/by-hand-audit-results-2026-11-06.md](search/by-hand-audit-results-2026-11-06.md), [data/by-hand-audit-reading-2026-11-06.csv](data/by-hand-audit-reading-2026-11-06.csv) |
 | OSF update covering C2, the fixed sample, D1 (S2, I1, Arcadium, S3, 31 AQ additions), D2 and its results; field 344-47 amended. No Nov 3 update (reported as submitted) exists on OSF, submitted or draft; this update covers its content | Nov 6, 2026 (submitted 14:50:01 UTC, approved 14:50:12 UTC) | https://osf.io/jnpr2 (Updates) |
+| Per-filing S2 and S3 results exported (reproduce the published fingerprints), with a data dictionary | Nov 6, 2026 | [data/S2-results-per-filing-2026-11-03.csv](data/S2-results-per-filing-2026-11-03.csv), [data/S3-results-per-filing-2026-11-04.csv](data/S3-results-per-filing-2026-11-04.csv), [data/S2-S3-exports-README.md](data/S2-S3-exports-README.md) |
+| Q3 AQ validation records published from the run logs (O1, AQ part); First National Corp exclusion found in a row beyond the stopping point (eligibility pending) | Nov 6, 2026 | [search/Q3-validation-records-2026-11-06.md](search/Q3-validation-records-2026-11-06.md), [data/Q3-AQ-validation-records-2026-11-01.csv](data/Q3-AQ-validation-records-2026-11-01.csv) |
+| 31 AQ frame additions described and compared with the sample (D1) | Nov 6, 2026 | [search/AQ-frame-additions-2026-11-06.md](search/AQ-frame-additions-2026-11-06.md), [data/AQ-frame-additions-2026-11-06.csv](data/AQ-frame-additions-2026-11-06.csv) |
+| Clarifications C10 (asset-backed trusts under X2) and C11 (10-K/A not a separate event); no counts change | Nov 6, 2026 | [search/clarifications-C10-C11-2026-11-06.md](search/clarifications-C10-C11-2026-11-06.md) |
 
 ## In progress
 
@@ -34,9 +38,8 @@
 
 ## Not started or pending
 
-- **Frame additions** (deviation D1): description of the 31 AQ additions (S2, Arcadium, S3) and comparison with the sample; per-filing S2 and S3 results to be exported to data/.
-- **Frame scope question** (from the by-hand audit): whether 10-K/A filings carrying only Part III information, and asset-backed trusts, belong in the screen frame. No effect on any published count.
-- **Export of the validation records** (open item O1): the records are recoverable from the automation's run logs; row-level export not yet published.
+- **First National Corp /VA/** (FY2024 10-K, 0001437749-25-010228): exclusion of Touchstone found in the Q3 validation logs; eligibility to be decided by the investigator, with the section 7 question that follows if eligible.
+- **O1, NP part:** records of the 58 NP companies not kept are not in the retrievable run history; open.
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
 - **Dataset, report and permanent DOI release:** not started.
