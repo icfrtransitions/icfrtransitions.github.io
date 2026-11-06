@@ -26,6 +26,7 @@
 | Arcadium Lithium eligible (second wrongful exclusion in the first audit, 2 of 541); screen S3 frozen (section 7) | Nov 4, 2026 | [search/S3-frozen-2026-11-04.md](search/S3-frozen-2026-11-04.md) |
 | S3 run on 4,442 AQ filings: 505 pass, 4 new eligible after triage and investigator decisions; AQ additions now 31 (fixed sample unchanged) | Nov 4, 2026 | [search/S3-results-2026-11-04.md](search/S3-results-2026-11-04.md) |
 | By-hand audit (D2) read by the investigator: 0 of 60 AQ and 0 of 60 NP wrongful exclusions (95% upper bound 5.96% each); 21 deferred first-audit filings checked (no statements); re-check NP count corrected to 13 deferred, 639 checked | Nov 6, 2026 | [search/by-hand-audit-results-2026-11-06.md](search/by-hand-audit-results-2026-11-06.md), [data/by-hand-audit-reading-2026-11-06.csv](data/by-hand-audit-reading-2026-11-06.csv) |
+| OSF update covering C2, the fixed sample, D1 (S2, I1, Arcadium, S3, 31 AQ additions), D2 and its results; field 344-47 amended. No Nov 3 update (reported as submitted) exists on OSF, submitted or draft; this update covers its content | Nov 6, 2026 (submitted 14:50:01 UTC, approved 14:50:12 UTC) | https://osf.io/jnpr2 (Updates) |
 
 ## In progress
 
@@ -33,7 +34,6 @@
 
 ## Not started or pending
 
-- **Follow-up OSF update** (C2, D1, D2): the investigator reports submitting it on Nov 3, 2026. As of Nov 3, 2026, 21:08 UTC, OSF's public record shows no new update (it may be awaiting approval). It predates the S2 results, the S2 eligibility decisions, I1, the Arcadium decision, S3 and the by-hand audit results, so a further update will report those.
 - **Frame additions** (deviation D1): description of the 31 AQ additions (S2, Arcadium, S3) and comparison with the sample; per-filing S2 and S3 results to be exported to data/.
 - **Frame scope question** (from the by-hand audit): whether 10-K/A filings carrying only Part III information, and asset-backed trusts, belong in the screen frame. No effect on any published count.
 - **Export of the validation records** (open item O1): the records are recoverable from the automation's run logs; row-level export not yet published.
