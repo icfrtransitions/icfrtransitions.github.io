@@ -40,7 +40,6 @@
 
 ## Not started or pending
 
-- **Frame additions file:** add First National and the three S4 additions to the row-level list (currently 31 of 35).
 - **O1, NP part:** records of the 58 NP companies not kept are not in the retrievable run history; open.
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
