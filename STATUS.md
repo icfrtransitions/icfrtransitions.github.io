@@ -33,7 +33,7 @@
 | Clarifications C10 (asset-backed trusts under X2) and C11 (10-K/A not a separate event); no counts change | Nov 6, 2026 | [search/clarifications-C10-C11-2026-11-06.md](search/clarifications-C10-C11-2026-11-06.md) |
 | First National Corp eligible (AQ addition 32); screen S4 frozen (section 7) | Nov 6, 2026 | [search/S4-frozen-2026-11-06.md](search/S4-frozen-2026-11-06.md) |
 | S4 run on 4,442 AQ filings: 21 pass, 3 new eligible (Penske, Quest Diagnostics, Veralto); AQ additions now 35 (fixed sample unchanged) | Nov 6, 2026 | [search/S4-results-2026-11-06.md](search/S4-results-2026-11-06.md) |
-| Investigator coding of the 60 sample cases completed and locked: all 60 cases marked verified by the investigator after checking the AI-prepared drafts against the filings; extra wording after a code moved to separate qualifier fields without changing any code; 51 weakness records, 43 acquired-business records. The locked file is withheld until second coding is finished so the second coder stays blind; its SHA-256 is `05c1b76a28df52f9c652e18155f311a14f06fe614bab88ae5c5679afb8d6af43`. This replaces the first locked file (`29aa83bd4c7f1e7f2bdb8ae08ea46448e141d080b33aaa281238a05ded4276bd`), corrected the same evening before second coding began: two present-at-entry citations now cite the registration statements (NP#9 and NP#20, weakness 2), and three 'open' entries in the first-period-remediated field were blanked to match the other unremediated records. No code changed | Nov 8, 2026 | This file (fingerprint only) |
+| Investigator coding of the 60 sample cases completed and locked: all 60 cases marked verified by the investigator after checking the AI-prepared drafts against the filings; extra wording after a code moved to separate qualifier fields without changing any code; 51 weakness records, 43 acquired-business records. The locked file is withheld until second coding is finished so the second coder stays blind; its current fingerprint (SHA-256) is `05c1b76a28df52f9c652e18155f311a14f06fe614bab88ae5c5679afb8d6af43`. It replaces the superseded first fingerprint (`29aa83bd4c7f1e7f2bdb8ae08ea46448e141d080b33aaa281238a05ded4276bd`), kept here for the record. The file was corrected the same evening, before second coding began: two present-at-entry citations now cite the registration statements (Anteris Technologies, NP#9, and Astera Labs, NP#20; weakness 2 in each), and three 'open' entries in the first-period-remediated field were blanked to match the other unremediated records. No code changed | Nov 8, 2026 | This file (fingerprint only) |
 
 ## In progress
 
@@ -46,6 +46,7 @@
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
 - **Dataset, report and permanent DOI release:** not started.
+- **Historical documentation item (unresolved):** the March 6, 2025 rule-test exercise (Pilot B) identified 11 candidates; their verification status is not documented in the current repository. This concerns the pilot only. It is separate from the locked 60-case coding, which it does not affect, and no outcome is inferred.
 
 ## Not claimed
 
