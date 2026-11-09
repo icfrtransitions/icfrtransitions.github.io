@@ -1,6 +1,6 @@
 # Project status
 
-**As of November 6, 2026.** This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
+**As of November 8, 2026.** This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
 
 ## Done (public record)
 
@@ -33,10 +33,12 @@
 | Clarifications C10 (asset-backed trusts under X2) and C11 (10-K/A not a separate event); no counts change | Nov 6, 2026 | [search/clarifications-C10-C11-2026-11-06.md](search/clarifications-C10-C11-2026-11-06.md) |
 | First National Corp eligible (AQ addition 32); screen S4 frozen (section 7) | Nov 6, 2026 | [search/S4-frozen-2026-11-06.md](search/S4-frozen-2026-11-06.md) |
 | S4 run on 4,442 AQ filings: 21 pass, 3 new eligible (Penske, Quest Diagnostics, Veralto); AQ additions now 35 (fixed sample unchanged) | Nov 6, 2026 | [search/S4-results-2026-11-06.md](search/S4-results-2026-11-06.md) |
+| Investigator coding of the 60 sample cases completed and locked: all 60 cases marked verified by the investigator after checking the AI-prepared drafts against the filings; extra wording after a code moved to separate qualifier fields without changing any code; 51 weakness records, 43 acquired-business records. The locked file is withheld until second coding is finished so the second coder stays blind; its SHA-256 is `29aa83bd4c7f1e7f2bdb8ae08ea46448e141d080b33aaa281238a05ded4276bd` | Nov 8, 2026 | This file (fingerprint only) |
 
 ## In progress
 
-- **Coding** of the 60 sample cases by the investigator, started Nov 2, 2026. AI-prepared draft codings are not the investigator's coding until each value has been checked against the filing.
+- **Second coding** of the 20-case subset ([search/second-coder-subset-2026-11-02.md](search/second-coder-subset-2026-11-02.md)): waiting for a second coder.
+- **Follow-up filings:** some cases wait on reports due before the Dec 31, 2026 cutoff (for example, Keysight's FY2026 10-K).
 
 ## Not started or pending
 
@@ -44,7 +46,6 @@
 - **Second coder:** not recruited.
 - **Technical reviewers** (2 or more) and **usability testers** (3 or more): not recruited.
 - **Dataset, report and permanent DOI release:** not started.
-- **Follow-up filings** up to the observation cutoff of Dec 31, 2026 (for example, Keysight's next 10-K).
 
 ## Not claimed
 
