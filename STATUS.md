@@ -1,6 +1,6 @@
 # Project status
 
-**As of November 8, 2026.** This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
+**As of November 17, 2026.** No change in the study record since November 8, 2026. This file is the single status ledger for the ICFR Transitions Project. The website and README link here. Older statements elsewhere carry their own dates.
 
 ## Done (public record)
 
@@ -38,6 +38,7 @@
 
 ## In progress
 
+- **Recruitment** of a second coder, technical reviewers and usability testers: open call posted on the website, November 17, 2026.
 - **Second coding** of the 20-case subset ([search/second-coder-subset-2026-11-02.md](search/second-coder-subset-2026-11-02.md)): waiting for a second coder.
 - **Follow-up filings:** some cases wait on reports due before the Dec 31, 2026 cutoff (for example, Keysight's FY2026 10-K).
 
