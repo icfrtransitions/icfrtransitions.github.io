@@ -28,7 +28,7 @@ https://icfrtransitions.github.io
 
 ## History
 
-Early drafts of this research were first posted in October 2026 on the investigator's practice website. The project moved to this independent, non-commercial home on October 31, 2026.
+Early drafts of this research were first posted in October 2026 on an earlier website. The project moved to this independent, non-commercial home on October 31, 2026.
 
 ## Data and method
 
